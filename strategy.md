@@ -10,6 +10,8 @@ To achieve the goals, we develop the newsletter content with three main componen
 
 ### Must-have sections
 
+I will add aline.
+
 <!--# I like these sections a lot. I had previously thought about a section just on data, but more general announcement are great, because then we are a wider range to pick from. I would love a blog, but first want to invest time into a "Guide" on the website that has tutorials for how do stuff (get Account on GitHub, get Element running, open an issue to add a data idea, etc. It's outlined here: https://github.com/orgs/openwashdata/projects/1/views/1?filterQuery=website&pane=issue&itemId=21939720 -->
 
 1.  Annoucements / Highlights: This section should write about the most important project update of the month, e.g., a newly released package, a super interesting data story, a worth-read framework, and etc.
