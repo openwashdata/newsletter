@@ -46,7 +46,7 @@ Check Buttondown documentation.
 <!--# I have had Natalie work on this and will share soon. Logo & colour palette. For Fonts, I would like some thing like Atkinson Hyperlegible for slides and website, but we are probably limited by what buttondown has available as fonts. https://brailleinstitute.org/freefont -->
 
 -   Colors
--   Fonts
+-   Fonts: Atkinson Hyperlegible
 -   Logo
 
 ![Newsletter Design Draft](https://github.com/openwashdata/newsletter/assets/22420281/4605f8e4-2ccd-4ee1-9a96-7e2be053a470)
