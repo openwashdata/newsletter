@@ -31,14 +31,22 @@ I will add aline.
 3.  Opportunities
 
 ## Logistics
-- Period: Bi-weekly or monthly (First Monday of the month)
-- First launch: 2023-07-04 (Monday)
+- Period: Monthly (First Monday of the month)
+- First launch: 2023-08-07 (Monday)
 - Publish Cycle (monthly):
   - Week 1: Send out newsletter
   - Week 2: Collect survey back, archive newsletter, write blog
   - Week 3: Write blog, choose content for Highlights section
   - Week 4: Write and review newsletter
-
+- Publish Schedule
+  - 2023-08-07
+  - 2023-09-04
+  - 2023-10-02
+  - 2023-11-06
+  - 2023-12-04
+  - 2024-01-01 (Skip? Or postpone to 2024-01-08)
+  - 2024-02-05
+  - 2024-03-04
 ## Design
 
 ### Formatting
