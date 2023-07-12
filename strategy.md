@@ -19,7 +19,7 @@ I will add aline.
 
 1.  **Annoucements / Highlights**: This section should write about the most important project update of the month, e.g., a newly released package, a super interesting data story, a worth-read framework, and etc.
 2.  **A blog post**: This section gives tips, tutorials, or demos on open data practice (or general open science). We can select one from our blog (if it's updated more often) or make a theme series.
-3.  **Contributor Appreciation**: A picture of data donators, analysts, sharers. Team or individual. Real or doodled. Some lines of introduction.
+3.  **Contributor Appreciation**: Appreciation of data donators, analysts, sharers. Team or individual. Real or doodled. Some lines of introduction. With some datasets there might a range of contributors to highlight. A picture is not necessary, but we could link to an online profile of them (e.g. LinkedIn, Twitter, ORCID, etc.)
 4.  **Get Involved**: Ways and links how to participate in this project
 5.  **Footer**
     1. Add a poll "What's your favorite section?"
