@@ -1,36 +1,32 @@
-# Openwashdata Digest
-TODO: Some greetings or a meme for this newsletter
+openwashdata news delivers the latest community achievements, practical blog posts, and many more to be expected. 
+Together we are building a sustainable data ecosystem for the WASH domain. 
 
-## Hightlights
+## Highlights
 ---
-TODO: An image
-### Title of Our Biggest News
-Write about the news here
-### Title of the Second Biggest News (Optional)
-Write about the news here
+Greetings here
 
-## Openwashdata Blog
+### HIGHLIGHT 1
+
+
+### HIGHLIGHT 2
+
+
+[Read more here]()
+
+## openwashdata Blog
 ---
-### TODO: Blog Title
 
-TODO: Write the blog post blurb here
-[Read More Here]()
+### BLOG TITLE
 
-## Contributor of the Month 
----
-TODO: An image of the contributor here
 
-TODO: A short introduction of the contributor
+
+[Continue to read here]()
 
 ## Get Involved
 ---
-We truly believe that, \#openwashdata project prospers when we have **YOU** work together and promote open science and data practice! No matter what background you are from, we come up with some ways for you to get involved:
+We truly believe that openwashdata project prospers when we have **YOU** work together and promote open science and data practice! No matter what background you are from, we come up with some ways for you to get involved:
 
- - [Join our chatroom to meet people!]()
+- [Join our chatroom to meet people!](https://openwashdata.org/pages/get-started/chat/)
 - [Share your WASH data with us](https://github.com/openwashdata/data)
-- Spread a word. Forward this email. 
-- Get more ideas? [Leave a message on Github to collaborate!]()
-  
-- [Cite openwashdata in your work]()
-- [Practice open science with our materials]()
-- Use openwashdata in courses
+- Spread the word. Forward this email. 
+- Got more ideas? [Leave us a message on Matrix to collaborate!](https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch)
