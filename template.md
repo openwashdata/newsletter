@@ -1,10 +1,7 @@
-openwashdata news delivers the latest community achievements, practical blog posts, and many more to be expected. 
-Together we are building a sustainable data ecosystem for the WASH domain. 
+Greetings here
 
 ## Highlights
 ---
-Greetings here
-
 ### HIGHLIGHT 1
 
 
@@ -13,14 +10,14 @@ Greetings here
 
 [Read more here]()
 
-## openwashdata Blog
+## openwashdata Blog: title
 ---
 
-### BLOG TITLE
-
-
-
 [Continue to read here]()
+
+## Contributor of the Month
+---
+
 
 ## Get Involved
 ---
