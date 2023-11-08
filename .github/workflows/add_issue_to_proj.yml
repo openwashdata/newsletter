@@ -27,22 +27,18 @@ jobs:
             const comment = context.payload.comment;
 
             // Function to check if a string contains the username
-            function mentionsUser(text) {
-              const regex = new RegExp(`@${username}\\b`, 'i');
-              return regex.test(text);
+            if (
+              issue.title.includes(`@${username}`) ||
+              issue.body.includes(`@${username}`)
+            ) {
+              return { mentioned: true };
             }
 
-            let mentioned = false;
-
-            if (mentionsUser(issue.title) || mentionsUser(issue.body)) {
-              mentioned = true;
+            if (comment && comment.body.includes(`@${username}`)) {
+              return { mentioned: true };
             }
 
-            if (comment && mentionsUser(comment.body)) {
-              mentioned = true;
-            }
-
-            return { mentioned };
+            return { mentioned: false };
 
       - name: Add Issue to Project Board
         if: steps.check_mention.outputs.mentioned == true
