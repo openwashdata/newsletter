@@ -39,16 +39,13 @@ jobs:
             }
 
             return false;
-      - name: Print check result
-        run: echo "${{ steps.check_mention.outputs.result }}$"
       - name: Add Issue to Project Board
         if: steps.check_mention.outputs.result == 'true'
-        run: |
-            - uses: actions/add-to-project@v0.5.0
-            - with:
-                  # URL of the project to add issues to
-                  project-url: https://github.com/orgs/openwashdata-dev/projects/1
-                  # A GitHub personal access token with write access to the project
-                  github-token: ${{ secrets.WORKFLOW_TOKEN }}
-                  # A comma-separated list of labels to use as a filter for issue to be added
-            
+        uses: actions/add-to-project@v0.5.0
+        with:
+            # URL of the project to add issues to
+            project-url: https://github.com/orgs/openwashdata-dev/projects/1
+            # A GitHub personal access token with write access to the project
+            github-token: ${{ secrets.WORKFLOW_TOKEN }}
+            # A comma-separated list of labels to use as a filter for issue to be added
+      
