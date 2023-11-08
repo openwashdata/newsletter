@@ -42,7 +42,7 @@ jobs:
       - name: Print check result
         run: echo "${{ steps.check_mention.outputs.mentioned }}$"
       - name: Add Issue to Project Board
-        if: steps.check_mention.outputs.mentioned == "true"
+        if: steps.check_mention.outputs.mentioned == 'true'
         run: |
             - uses: actions/add-to-project@v0.5.0
             - with:
