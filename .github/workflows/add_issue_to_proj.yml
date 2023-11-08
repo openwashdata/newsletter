@@ -21,4 +21,4 @@ jobs:
           # Use the GitHub API to add the issue to a project board
           # Specify the project board and column to add the issue to
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
