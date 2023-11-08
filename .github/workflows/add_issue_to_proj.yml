@@ -13,10 +13,12 @@ jobs:
     steps:
       - name: Check if issue mentions you
         id: check_mention
-        run: echo "Mentioned: ${{ contains(github.event.issue.body, '@mianzg') }}"
+        run: |
+          mentioned=$(echo "${{ github.event.issue.body }}" | grep -c "@mianzg")
+          echo "Mentioned: $mentioned"
 
       - name: Add Issue to Project Board
-        if: steps.check_mention.outputs.mention == 'true'
+        if: steps.check_mention.outputs.mention > 0 
         uses: actions/add-to-project@v0.5.0
         with:
             # URL of the project to add issues to
