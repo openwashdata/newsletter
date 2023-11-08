@@ -1,0 +1,24 @@
+name: Add Mentioned Issues to Project Board
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+
+jobs:
+  add-issue-to-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if issue mentions you
+        id: check_mention
+        run: echo "Mentioned: ${{ contains(github.event.issue.body, '@mianzg') }}"
+
+      - name: Add Issue to Project Board
+        if: steps.check_mention.outputs.mention == 'true'
+        run: |
+          # Use the GitHub API to add the issue to a project board
+          # Specify the project board and column to add the issue to
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
