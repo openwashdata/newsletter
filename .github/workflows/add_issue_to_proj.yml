@@ -31,14 +31,14 @@ jobs:
               issue.title.includes(`@${username}`) ||
               issue.body.includes(`@${username}`)
             ) {
-              return { mentioned: true };
+              return true;
             }
 
             if (comment && comment.body.includes(`@${username}`)) {
-              return { mentioned: true };
+              return true;
             }
 
-            return { mentioned: false };
+            return false;
       - name: Print check result
         run: echo "${{ steps.check_mention.outputs.result }}$"
       - name: Add Issue to Project Board
