@@ -39,7 +39,8 @@ jobs:
             }
 
             return { mentioned: false };
-
+      - name: Print check result
+        run: echo "${{ steps.check_mention.outputs }}$"
       - name: Add Issue to Project Board
         if: steps.check_mention.outputs.mentioned == true
         run: |
