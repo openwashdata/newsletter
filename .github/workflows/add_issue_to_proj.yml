@@ -5,6 +5,11 @@ on:
     types:
       - opened
       - edited
+  issue_comment:
+    types:
+      - created
+      - edited
+
 
 jobs:
   add-issue-to-project:
@@ -13,12 +18,34 @@ jobs:
     steps:
       - name: Check if issue mentions you
         id: check_mention
-        run: |
-          mentioned=$(echo "${{ github.event.issue.body }}" | grep -c "@mianzg")
-          echo "${{ steps.check_mention.outputs.mentioned }}"
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.WORKFLOW_TOKEN }}
+          script: |
+            const username = 'mianzg'; // Replace with your GitHub username
+            const issue = context.payload.issue;
+            const comment = context.payload.comment;
+
+            // Function to check if a string contains the username
+            function mentionsUser(text) {
+              const regex = new RegExp(`@${username}\\b`, 'i');
+              return regex.test(text);
+            }
+
+            let mentioned = false;
+
+            if (mentionsUser(issue.title) || mentionsUser(issue.body)) {
+              mentioned = true;
+            }
+
+            if (comment && mentionsUser(comment.body)) {
+              mentioned = true;
+            }
+
+            return { mentioned };
 
       - name: Add Issue to Project Board
-        if: steps.check_mention.outputs.mentioned > 0 
+        if: steps.check_mention.outputs.mentioned == true
         run: |
             - uses: actions/add-to-project@v0.5.0
             - with:
