@@ -10,9 +10,8 @@ some achievements.
 
 ## Data
 
-In the past two months, we published 7 additional datasets, closing the
-year with a total of 26 datasets. Learn more about our new datasets on
-their dedicated websites:
+We published seven additional datasets in the past two months, closing the
+year with 26. Learn more about our new datasets on their dedicated websites:
 
 -   `watercostaccra` - <https://openwashdata.github.io/watercostaccra>:
     Household water costs and coping strategies data from metropolitan
