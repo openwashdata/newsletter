@@ -1,0 +1,55 @@
+---
+title: "openwashdata news #17"
+subtitle: ""
+format: markdown
+---
+
+```{r}
+#| echo: false
+
+new_pkgs <- c("planetaryhdi", 
+              "ploswater", 
+              "glossarywho",
+              "analytics")
+
+devtools::install_github(paste0("openwashdata", "/", new_pkgs))
+
+```
+
+It's February already. We hope you have has a good first month of 2025. At openwashdata, we are actively filling positions and are looking for a Scientific Assitant to support our team. 
+
+## Job posting
+
+If you like what you see in this newsletter and you think you can contribute to our mission, we have a job posting for you. We are looking for a Scientific Assistant to support our team. The position is open until 5th March 2025. Learn more about the position and apply: 
+
+## Data
+
+We published three additional datasets in the past two months and are now at 29 in total. Learn more about our new datasets on their dedicated websites:
+
+- `planetaryhdi` - <https://openwashdata.github.io/planetaryhdi>: `r packageDescription(new_pkgs[[1]])$Title`
+- `ploswater` - <https://openwashdata.github.io/ploswater>: `r packageDescription(new_pkgs[[2]])$Title`
+- `glossarywho` - <https://openwashdata.github.io/glossarywho>: `r packageDescription(new_pkgs[[3]])$Title`
+- `analytics` - <https://openwashdata.github.io/analytics>: `r packageDescription(new_pkgs[[4]])$Title`
+
+## `glossarywho` R package
+
+The `glossarywho` R package gives you access to a recently published glossary with 207 terms by the World Health Organisation. The resource was compiled by Epidemiology, Monitoring and Evaluation UHL (EME), Maternal, Newborn, Child & Adolescent Health & Ageing (MCA) Team and is an effort to standardize the usage of terms around health data and statistics. The glossary is accessible as a PDF here: https://www.who.int/publications/i/item/9789240105485. Our R package provides the glossary as a dataset in our typical R data package format, a CSV and an XLSX. 
+
+## openwashdata analytics & dashboard
+
+The data science for openwashdata course conducted by Global Health Engineering (GHE) at ETH Zürich generates data on participants’ engagement with the course, previous experiences with programming and take-aways from the course. This package makes it easier to access data stored in a variety of formats and provide a consolidate storage for it. In the future, this data will be used to provide an overview of the impact of the course.
+
+We have build a dashboard from the analytics data that is accessible here: 
+
+## Contributor of the Month
+
+Our contributor of the month is once again [Yash Dubey](). Yash is concluding his 6-month internship with the openwashdata team at the end of February. He has produced everything that is covered in this newsletter and we will truly miss him as a team member. Thank you, Yash, for your hard work and dedication to the project!
+
+## Get Involved
+
+We believe the openwashdata project prospers when we have **YOU** work together and promote open science and data practice! No matter what background you are from, we come up with some ways for you to get involved:
+
+- [Join our chatroom to meet people!](https://openwashdata.org/pages/get-started/chat/)
+- [Share your WASH data with us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/)
+- Spread the word. Forward this email. 
+- Got more ideas? [Leave us a message on Matrix to collaborate!](https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch)
