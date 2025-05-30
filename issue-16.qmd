@@ -41,11 +41,13 @@ Over the past two years, we have invested much time into publishing data as R da
 
 ## Hackathon
 
-On 28th November 2024, we hosted our second hackathon. Instead of developing R data packages, we asked participants to use our data and prepare a data story. We were impressed by the creativity and the variety of presented stories. The three winners are:
+On 28th November 2024, we hosted our second hackathon. Instead of developing R data packages, we asked participants to use our data and prepare a data story. We were impressed by the creativity and the variety of presented stories. 
 
-- 1st prize:
-- 2nd prize:
-- 3rd prize:
+- 1st prize: [Prerna Prasad](https://www.linkedin.com/in/prerna-prasad-17a310189/)
+- 2nd prize: [James Halonyere](https://www.linkedin.com/in/jameshalonyere/)
+- 3rd prize: [Benton Otieno](https://www.linkedin.com/in/bentonotieno/)
+
+Learn more about the winning contributions in our blog post: <https://openwashdata.org/pages/blog/posts/2024-12-09-hackathon/>
 
 ## National Prize in Switzerland 
 

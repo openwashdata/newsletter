@@ -10,8 +10,9 @@ some achievements.
 
 ## Data
 
-We published seven additional datasets in the past two months, closing the
-year with 26. Learn more about our new datasets on their dedicated websites:
+We published seven additional datasets in the past two months, closing
+the year with 26. Learn more about our new datasets on their dedicated
+websites:
 
 -   `watercostaccra` - <https://openwashdata.github.io/watercostaccra>:
     Household water costs and coping strategies data from metropolitan
@@ -34,18 +35,17 @@ year with 26. Learn more about our new datasets on their dedicated websites:
 
 ## `washr` R package
 
-Over the past two years, we have invested a lot of time into publishing
-data as R data packages. We started out with 100s of bullet points to
-document every step to reach the final product, the curated website for
-each data package. With `washr` our goal is to automate this process,
-streamline templates, and significantly reduce the time it takes to
-publish a dataset. Our first release does exactly that we are proud that
-it is available through the official Comprehensive R Archive Network
-(CRAN), so that it can installed with the command:
-`install.packages("washr")`. In the next step of development, we will
-adapt the package for it to be applicable to a context outside of
-openwashdata, so that it could be used by anyone wanting to publish a
-dataset using R data packages.
+Over the past two years, we have invested much time into publishing data
+as R data packages. We started with 100s of bullet points to document
+every step to reach the final product, the curated website for each data
+package. With `washr` our goal is to automate this process, streamline
+templates, and significantly reduce the time it takes to publish a
+dataset. Our first release does precisely that. We are proud that it is
+available through the official Comprehensive R Archive Network (CRAN),
+so that it can installed with the command: `install.packages("washr")`.
+In the next step of development, we will adapt the package to apply to a
+context outside of openwashdata so that it can be used by anyone wanting
+to publish a dataset using R data packages.
 
 -   `washr` Package website: <https://openwashdata.github.io/washr>:
     Package website
@@ -55,11 +55,17 @@ dataset using R data packages.
 On 28th November 2024, we hosted our second hackathon. Instead of
 developing R data packages, we asked participants to use our data and
 prepare a data story. We were impressed by the creativity and the
-variety of stories that were presented. The three winners are:
+variety of presented stories.
 
--   1st prize:
--   2nd prize:
--   3rd prize:
+-   1st prize: [Prerna
+    Prasad](https://www.linkedin.com/in/prerna-prasad-17a310189/)
+-   2nd prize: [James
+    Halonyere](https://www.linkedin.com/in/jameshalonyere/)
+-   3rd prize: [Benton
+    Otieno](https://www.linkedin.com/in/bentonotieno/)
+
+Learn more about the winning contributions in our blog post:
+<https://openwashdata.org/pages/blog/posts/2024-12-09-hackathon/>
 
 ## National Prize in Switzerland
 
