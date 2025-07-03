@@ -18,8 +18,6 @@ devtools::install_github(paste0("openwashdata", "/", new_pkgs))
 
 ```
 
-Dear openwashdata community,
-
 It's been more than four months since our last newsletter. We've been developing our strategy for the final 12 months of funding from the ETH Board Open Research Data programme. Our team has grown with three new members, we've launched new data packages and we're preparing the sign-up forms for the next iteration of our "data science for openwashdata" course.
 
 ## Highlights
