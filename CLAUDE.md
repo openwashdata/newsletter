@@ -54,6 +54,12 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 - **Week 3**: Write blog content, choose highlights
 - **Week 4**: Write and review next newsletter
 
+## Writing Style and Tone
+- Use clear, direct language without excessive superlatives
+- Avoid overused filler words like "thrilled", "excited", "remarkable", "significantly", "outstanding"
+- Prefer simple, factual descriptions over hyperbolic language
+- Let the content speak for itself without overselling
+
 ## Key Links Template
 - Chatroom: `https://openwashdata.org/pages/get-started/chat/`
 - Data sharing guide: `https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/`
