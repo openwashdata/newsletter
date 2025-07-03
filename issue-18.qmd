@@ -45,7 +45,7 @@ Three new team members have joined openwashdata this year:
 
 ### 2nd iteration of data science for openwashdata
 
-Note the date! The next iteration of ds4owd will start on 11th September. We will share the sign-up form on Monday, 11th July, but you can already familiarize yourself with the course content and structure on the course website: <https://ds4owd-002.github.io/website/>
+**Note the date!** The next iteration of ds4owd will start on **11th September**. We will share the sign-up form on Monday, 11th July, but you can already familiarize yourself with the course content and structure on the course website: <https://ds4owd-002.github.io/website/>
 
 ### openwashdata conference
 

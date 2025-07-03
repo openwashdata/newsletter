@@ -59,8 +59,21 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 - Avoid overused filler words like "thrilled", "excited", "remarkable", "significantly", "outstanding"
 - Prefer simple, factual descriptions over hyperbolic language
 - Let the content speak for itself without overselling
+- Use 2 spaces for indentation (no tabs)
+- Maximum 80 characters per line
 
 ## Key Links Template
 - Chatroom: `https://openwashdata.org/pages/get-started/chat/`
 - Data sharing guide: `https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/`
 - Matrix collaboration: `https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch`
+
+## Project Management with GitHub CLI
+
+- Create branches from `dev`. Do not push to `main`
+- List issues: `gh issue list`
+- View issue details: `gh issue view 80` (e.g., for issue #80 "Rename geographies parameter")
+- Create branch for issue: `gh issue develop 80`
+- Checkout branch: `git checkout 80-rename-geographies-parameter-to-entities`
+- Create pull request: `gh pr create --title "Rename geographies parameter to entities" --body "Implements #80"`
+- List pull requests: `gh pr list`
+- View pull request: `gh pr view PR_NUMBER`

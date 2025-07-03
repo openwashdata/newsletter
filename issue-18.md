@@ -6,7 +6,7 @@ title: "openwashdata news #18"
 toc-title: Table of contents
 ---
 
-::::::: cell
+:::::::: cell
 ::: {.cell-output .cell-output-stderr}
     Using GitHub PAT from the git credential store.
 :::
@@ -22,58 +22,53 @@ toc-title: Table of contents
 :::
 
 ::: {.cell-output .cell-output-stderr}
-    Skipping install of 'glaas' from a github remote, the SHA1 (a9f8039c) has not changed since last install.
+    Skipping install of 'boreholeforensicspumpingtest' from a github remote, the SHA1 (81a5435f) has not changed since last install.
       Use `force = TRUE` to force installation
 :::
-:::::::
 
-Dear openwashdata community,
+::: {.cell-output .cell-output-stderr}
+    Skipping install of 'washmalawi' from a github remote, the SHA1 (e4a27b56) has not changed since last install.
+      Use `force = TRUE` to force installation
+:::
+::::::::
 
-It's been a while since our last newsletter, and we're excited to
-reconnect with you! We've been busy developing our strategy for the
-final 12 months of funding from the ETH Board ORD, and we're thrilled to
-share some exciting updates. Our team has grown with two wonderful new
-members, we've launched impactful new data packages including a major
-partnership with WASHweb, and we're offering one final internship
-opportunity. Read on to learn about all the ways openwashdata continues
-to advance open WASH data practices!
+It's been more than four months since our last newsletter. We've been
+developing our strategy for the final 12 months of funding from the ETH
+Board Open Research Data programme. Our team has grown with three new
+members, we've launched new data packages and we're preparing the
+sign-up forms for the next iteration of our "data science for
+openwashdata" course.
 
 ## Highlights
 
 ### 📊 New Data Releases
 
-We're excited to share our latest data packages that continue to expand
-our open WASH data collection:
+Our latest data packages continue to expand the open WASH data
+collection:
 
 -   `ds4owdanalytics` -
     <https://openwashdata.github.io/ds4owdanalytics>: DS4OWD Analytics
 -   `undpcomposite` - <https://openwashdata.github.io/undpcomposite>:
     UNDP Composite Indicators Timeseries
--   `glaas` - <https://openwashdata.github.io/glaas>: UN-Water Global
-    Analysis and Assessment of Sanitation and Drinking-water
-
-### 🤝 GLAAS Data Partnership with WASHweb
-
-We're thrilled to highlight our collaboration with WASHweb to make the
-UN-Water Global Analysis and Assessment of Sanitation and Drinking-Water
-(GLAAS) data openly accessible. The `glaas` package provides streamlined
-access to comprehensive national-level WASH system data from over 100
-countries, covering crucial aspects like governance, financing, and
-human resources. This partnership exemplifies our commitment to breaking
-down data silos and making critical WASH monitoring data freely
-available to researchers, policymakers, and practitioners worldwide.
+-   `boreholeforensicspumpingtest` -
+    <https://openwashdata.github.io/boreholeforensicspumpingtest>:
+    Borehole Forensics 4 - Pumping Test Data 2018-2024
+-   `washmalawi` - <https://openwashdata.github.io/washmalawi>: WASH
+    Household Level Survey Data 2018 - 2023
 
 ### 🌱 New faces
 
-We're delighted to welcome two talented individuals who have joined the
-openwashdata team this year:
+Three new team members have joined openwashdata this year:
 
 **[Nicolò Massari](https://ch.linkedin.com/in/massarin)** joined us in
 February as an intern. A self-described "hitchhiker of the cosmos,"
 Nicolò brings a strong background in computational methods and
 programming to our team. His technical expertise has been instrumental
 in developing new data packages and improving our data processing
-workflows.
+workflows. He is also actively supporting us in the development of
+[`ghe_transcribe`](https://github.com/Global-Health-Engineering/ghe_transcribe/),
+a package for transcribing audio files into text with a focus on data
+privacy and local processing.
 
 **[Adriana Clavijo](https://www.linkedin.com/in/adriana-clavijo)**
 joined us in June as a Scientific Assistant for 12 months. As a data
@@ -83,35 +78,53 @@ visualization and improving data communication. Her skills are helping
 us make WASH data more accessible and understandable to a broader
 audience.
 
-## openwashdata internship: Final 6-month internship opportunity
+**[Emmanuel Mhango](https://www.linkedin.com/in/emmanuellmhango)** leads
+WASH data quality and publication efforts, supporting open data
+workflows in the global WASH sector. Currently attached to ETH Zurich's
+openwashdata project through BASEFlow Malawi. He has successfully
+published two high-quality WASH datasets, ensuring they meet standards
+of completeness, accessibility, and reusability. We are actively working
+on many more.
 
-As our funded project period draws to a close, we're offering one final
-opportunity for a 6-month internship with openwashdata. This position is
-ideal for students passionate about open science, data management, and
-WASH sector development. The intern will work directly with our team to
-curate and publish WASH datasets, develop R packages, contribute to our
-educational materials, and engage with our growing community of data
-users and contributors. This is a unique chance to gain hands-on
-experience in data science for social good while building a portfolio of
-published data packages. Applications are open to bachelor's and
-master's students from ETH Zurich and other Swiss universities. If
-you're interested in making WASH data more accessible and impactful,
-we'd love to hear from you!
+### 📅 Upcoming Events
+
+### 2nd iteration of data science for openwashdata
+
+**Note the date!** The next iteration of ds4owd will start on **11th
+September**. We will share the sign-up form on Monday, 11th July, but
+you can already familiarize yourself with the course content and
+structure on the course website: <https://ds4owd-002.github.io/website/>
+
+### openwashdata conference
+
+We'll be hosting the first openwashdata conference on **15-17 July
+2025**. This internal event for the Global Health Engineering group at
+ETH Zurich will bring our team together to:
+
+-   Showcase data steward Emmanuel's work over the past 6 months
+-   Plan for the future of openwashdata
+-   Host a Claude Code hackathon with Global Health Engineering
+    colleagues
+-   Go on a summer excursion in Zurich
+
+The conference will explore new AI tools like Claude Code to transform
+workflows at Global Health Engineering. We will explore this from the
+lense of working with software and data, but also the more research
+focused tasks of literature review, article and proposal writing. We
+will share the best use cases and lessons learned in our next newsletter
+issues and through blog posts.
 
 ## Contributor of the Month
 
-This month, we're proud to recognize **[Nicolò
-Massari](https://ch.linkedin.com/in/massarin)** as our contributor of
-the month! Since joining us as an intern in February, Nicolò has made
-exceptional contributions to the openwashdata project. His work on the
-`glaas` package has been instrumental in making the UN-Water Global
-Analysis and Assessment of Sanitation and Drinking-Water data accessible
-to the global WASH community. Beyond this flagship project, Nicolò has
-demonstrated outstanding technical skills in developing robust data
-processing workflows and ensuring data quality across multiple packages.
-His enthusiasm for open science and commitment to making WASH data more
-accessible embodies the spirit of openwashdata. Thank you, Nicolò, for
-your dedication and impactful contributions!
+This month, we recognize **[Emmanuel
+Mhango](https://www.linkedin.com/in/emmanuellmhango)** as our
+contributor of the month. Emmanuel has expanded the openwashdata
+collection through his data quality and publication efforts. He has
+published 5 WASH datasets that meet standards of completeness,
+accessibility, and reusability. Emmanuel currently has another 6 data
+packages in the review pipeline. His work through BASEFlow Malawi has
+strengthened our WASH data coverage for the African region. Thank you,
+Emmanuel, for your contributions to open WASH data.
 
 ## Get Involved
 
