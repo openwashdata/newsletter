@@ -30,24 +30,24 @@ Our latest data packages continue to expand the open WASH data collection:
 
 - `ds4owdanalytics` - <https://openwashdata.github.io/ds4owdanalytics>: `r packageDescription(new_pkgs[[1]])$Title`
 - `undpcomposite` - <https://openwashdata.github.io/undpcomposite>: `r packageDescription(new_pkgs[[2]])$Title`
-- **NEW** `boreholeforensicspumpingtest` - <https://openwashdata.github.io/boreholeforensicspumpingtest>: `r packageDescription(new_pkgs[[3]])$Title`
-- **NEW** `washmalawi` - <https://openwashdata.github.io/washmalawi>: `r packageDescription(new_pkgs[[4]])$Title`
+- `boreholeforensicspumpingtest` - <https://openwashdata.github.io/boreholeforensicspumpingtest>: `r packageDescription(new_pkgs[[3]])$Title`
+- `washmalawi` - <https://openwashdata.github.io/washmalawi>: `r packageDescription(new_pkgs[[4]])$Title`
 
 ### 🌱 New faces
 
 Three new team members have joined openwashdata this year:
 
-**[Nicolò Massari](https://ch.linkedin.com/in/massarin)** joined us in February as an intern. A self-described "hitchhiker of the cosmos," Nicolò brings a strong background in computational methods and programming to our team. His technical expertise has been instrumental in developing new data packages and improving our data processing workflows.
+**[Nicolò Massari](https://ch.linkedin.com/in/massarin)** joined us in February as an intern. A self-described "hitchhiker of the cosmos," Nicolò brings a strong background in computational methods and programming to our team. His technical expertise has been instrumental in developing new data packages and improving our data processing workflows. He is also actively supporting us in the development of [`ghe_transcribe`](https://github.com/Global-Health-Engineering/ghe_transcribe/), a package for transcribing audio files into text with a focus on data privacy and local processing.
 
 **[Adriana Clavijo](https://www.linkedin.com/in/adriana-clavijo)** joined us in June as a Scientific Assistant for 12 months. As a data scientist and statistician with diverse experience across industry, government, and consulting sectors, Adriana is passionate about data visualization and improving data communication. Her skills are helping us make WASH data more accessible and understandable to a broader audience.
 
-**[Emmanuel Mhango](https://www.linkedin.com/in/emmanuellmhango)** leads WASH data quality and publication efforts, supporting open data workflows in the global WASH sector. Currently attached to ETH Zurich's openwashdata project through BASEFlow Malawi. He has successfully published 5 high-quality WASH datasets, ensuring they meet standards of completeness, accessibility, and reusability.
+**[Emmanuel Mhango](https://www.linkedin.com/in/emmanuellmhango)** leads WASH data quality and publication efforts, supporting open data workflows in the global WASH sector. Currently attached to ETH Zurich's openwashdata project through BASEFlow Malawi. He has successfully published two high-quality WASH datasets, ensuring they meet standards of completeness, accessibility, and reusability. We are actively working on many more.
 
 ### 📅 Upcoming Events
 
 ### 2nd iteration of data science for openwashdata
 
-Note the date. The next iteration of ds4owd will start on 11th September. We will share the sign-up form on Monday, 11th July, but you can already familiarize yourself with the course content and structure on the course website: <https://ds4owd-002.github.io/website/>
+Note the date! The next iteration of ds4owd will start on 11th September. We will share the sign-up form on Monday, 11th July, but you can already familiarize yourself with the course content and structure on the course website: <https://ds4owd-002.github.io/website/>
 
 ### openwashdata conference
 
@@ -63,8 +63,6 @@ The conference will explore new AI tools like Claude Code to transform workflows
 ## Contributor of the Month
 
 This month, we recognize **[Emmanuel Mhango](https://www.linkedin.com/in/emmanuellmhango)** as our contributor of the month. Emmanuel has expanded the openwashdata collection through his data quality and publication efforts. He has published 5 WASH datasets that meet standards of completeness, accessibility, and reusability. Emmanuel currently has another 6 data packages in the review pipeline. His work through BASEFlow Malawi has strengthened our WASH data coverage for the African region. Thank you, Emmanuel, for your contributions to open WASH data.
-
-
 
 ## Get Involved
 
