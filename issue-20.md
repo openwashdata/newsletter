@@ -14,7 +14,7 @@ openwashdata" course and share updates about the upcoming cohort.
 
 Our latest blog post by
 [Adriana](https://openwashdata.org/about/adriana/) analyzes registration
-data from the upcomding "Data Science for openwashdata" (ds4owd) course.
+data from the upcoming "Data Science for openwashdata" (ds4owd) course.
 The data shows:
 
 -   **Geography**: Strong representation from African countries with
