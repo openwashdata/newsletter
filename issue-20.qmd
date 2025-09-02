@@ -1,0 +1,89 @@
+---
+title: "openwashdata Newsletter - Issue 20"
+date: "2025-09-02"
+format: html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+Dear openwashdata community,
+
+Welcome to the September 2025 edition of our newsletter! This month, we dive 
+into the fascinating demographics of our Data Science for openwashdata course 
+participants and share important updates about the upcoming cohort.
+
+## 📊 Blog Highlight: Who's Learning Data Science for WASH?
+
+Our latest blog post analyzes registration data from the Data Science for 
+openwashdata (ds4owd) course, revealing a truly global and diverse community 
+of learners. The analysis shows:
+
+- **Global reach**: Strong representation from African countries with 
+  participants spanning multiple continents
+- **Diverse backgrounds**: 40% of participants hold advanced degrees 
+  (master's or doctorate), while 40% are employed full-time
+- **Gender balance**: Approximately 40% female participation
+- **Learning journey**: About 40% are R programming beginners, showing the 
+  course's accessibility
+- **AI adoption**: Interestingly, 40% already use AI platforms like ChatGPT 
+  and Claude in their work
+
+The blog post features beautiful visualizations including a world map of 
+registrations, an age/gender population pyramid, and distributions of 
+education levels and programming experience.
+
+[Read the full analysis here](https://openwashdata.org/pages/blog/posts/2025-09-01-ds4owd-002-registration-analysis/)
+
+## 🎓 Course Update: Registrations Still Open!
+
+The second cohort of Data Science for openwashdata (ds4owd-002) starts next 
+week on **Thursday, September 11th**. If you haven't registered yet, there's 
+still time!
+
+Can't make it to the live sessions? No problem! We've already held a 
+pre-course Q&A session, and the recording along with comprehensive notes is 
+available for all registered participants.
+
+[Access Q&A recording and notes](https://ds4owd-002.github.io/website/modules/md-00.html)
+
+The course covers:
+- R programming fundamentals
+- Data wrangling and visualization
+- Working with WASH datasets
+- Creating reproducible research
+- Publishing data packages
+
+Whether you're new to programming or looking to enhance your data science 
+skills for WASH applications, this course provides a supportive learning 
+environment with practical, hands-on exercises.
+
+## Contributor of the Month
+---
+
+*To be announced - nominations welcome!*
+
+## Get Involved
+
+We believe the openwashdata project prospers when we have **YOU** work
+together and promote open science and data practice! Here's how you can
+get involved:
+
+- **Connect**: [Join our
+  chatroom](https://openwashdata.org/pages/get-started/chat/) | [Matrix
+  collaboration](https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch)
+- **Share data**: [Submit your WASH
+  dataset](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/)
+  | [Data dictionary
+  template](https://github.com/openwashdata/data-dictionary-template)
+- **Use & cite**: Find citation info on each dataset page | [Cite the
+  project](https://doi.org/10.5281/zenodo.8300700)
+- **Contribute**: [Report issues or suggest
+  ideas](https://github.com/openwashdata/openwashdata.github.io/issues)
+  | Email: openwashdata@ethz.ch
+- **Spread the word**: Forward this newsletter | Share on social media
+
+---
+
+*Thank you for being part of the openwashdata community!*
