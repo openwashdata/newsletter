@@ -1,65 +1,78 @@
 ---
 title: "openwashdata Newsletter - Issue 20"
 date: "2025-09-02"
-format: html
+format: markdown
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
-Welcome to the September 2025 edition of our newsletter! This month, we look 
-at the demographics of the registrations for our "Data Science for openwashdata course" 
-and share updates about the upcoming cohort.
+Welcome to the September 2025 edition of our newsletter! This month,
+we look at the demographics of the registrations for our "Data Science
+for openwashdata" course and share updates about the upcoming cohort.
 
 ## 📊 Blog Highlight: Course Registration Demographics
 
-Our latest blog post by [Adriana](https://openwashdata.org/about/adriana/) analyzes registration data from the Data Science for openwashdata (ds4owd) course. The data shows:
+Our latest blog post by [Adriana](https://openwashdata.org/about/adriana/)
+analyzes registration data from the upcomding "Data Science for openwashdata"
+(ds4owd) course. The data shows:
 
 - **Geography**: Strong representation from African countries with 
   participants from 37 countries 
 - **Gender**: Approximately 40% female participation
 - **Experience**: About 40% are R programming beginners
 
-The blog post includes visualizations on country representations, 
-an age/gender pyramid, and distributions of education levels and 
+The blog post includes visualizations on country representations,
+an age/gender pyramid, and distributions of education levels and
 programming experience.
 
 [Read the full analysis here](https://openwashdata.org/pages/blog/posts/2025-09-01-ds4owd-002-registration-analysis/)
 
 ## 🎓 Course Update: Registrations Still Open
 
-The second cohort of Data Science for openwashdata (ds4owd-002) starts next 
-week on **Thursday, September 11th**. 
+The second cohort of Data Science for openwashdata (ds4owd-002)
+starts next week on **Thursday, September 11th**. 
 
 Registration remains open: <https://ee-eu.kobotoolbox.org/single/7V3qeDYD>
 
-For those who could not attend the a pre-course Q&A session, a recording 
-and notes are available here: <https://ds4owd-002.github.io/website/modules/md-00.html>
+For those who could not attend the pre-course Q&A session, a
+recording and notes are available here:
+<https://ds4owd-002.github.io/website/modules/md-00.html>
 
 ## 🔧 Tool Development: fairenough R Package
 
-We're beta testing a new R package by [Nicoló] called `fairenough` that will streamline 
-our data publication process. This package leverages LLM tools like the R 
-package `elmer` to help ensure our datasets meet FAIR (Findable, Accessible, 
-Interoperable, Reusable) data principles.
+We're beta testing a new R package by [Nicoló](https://openwashdata.org/about/nicolo/) called `fairenough`
+that will streamline our data publication process. This package
+leverages LLM tools like the R package `elmer` to help ensure our
+datasets meet FAIR (Findable, Accessible, Interoperable, Reusable)
+data principles.
 
-The package is currently in development and will help automate several aspects 
-of data package creation and validation. If you participate in our course "Data Science for openwashdata", you will prepare your data for a publication using this package.
+The package is currently in development and will help automate
+several aspects of data package creation and validation. If you
+participate in our course "Data Science for openwashdata", you will
+prepare your data for a publication using this package.
 
-Explore the fairenough package: <https://github.com/openwashdata/fairenough>
+Explore the fairenough package:
+<https://github.com/openwashdata/fairenough>
 
 ## Contributor of the Month
 
-This month we recognize **Adriana Clavijo** for her contributions to the 
-openwashdata community. Thank you, Adriana, for your dedication to open 
-science and WASH data! 
+This month we recognize **Adriana Clavijo** for her contributions to
+the openwashdata community. Thank you, Adriana, for your dedication
+to open science and WASH data! 
 
 ## Get Involved
 
-We believe the openwashdata project prospers when we have **YOU** work together and promote open science and data practice! No matter what background you are from, we come up with some ways for you to get involved:
+We believe the openwashdata project prospers when we have **YOU**
+work together and promote open science and data practice! No matter
+what background you are from, we come up with some ways for you to
+get involved:
 
 - [Join our chatroom to meet people!](https://openwashdata.org/pages/get-started/chat/)
 - [Share your WASH data with us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/)
 - Spread the word. Forward this email. 
-- Got more ideas? [Leave us a message on Matrix to collaborate!](https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch)
+- Got more ideas? [Leave us a message on Matrix to
+  collaborate!](https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch)
