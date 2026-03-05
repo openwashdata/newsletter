@@ -1,0 +1,110 @@
+---
+date: 2026-03-06
+editor_options:
+  chunk_output_type: console
+title: openwashdata Newsletter - Issue 21
+toc-title: Table of contents
+---
+
+Welcome to the first edition of 2026 of our newsletter! This month, we
+present the updated GLAAS package, introduce our new R package for data
+sharing, share an update in our ongoing collaboration with BASEFlow
+Malawi, and highlight an opportunity to join our team through an
+internship.
+
+## 🔍 Updated GLAAS package
+
+Thanks to the work of [Colin](https://openwashdata.org/about/colin/) and
+[Nicolò](https://openwashdata.org/about/nicolo/) we now have an updated
+version of the GLAAS R package. It provides comprehensive access to the
+UN-Water Global Analysis and Assessment of Sanitation and Drinking-water
+(GLAAS) dataset. The WHO GLAAS survey collects data on water,
+sanitation, and hygiene (WASH) systems, policies, and financing from
+countries worldwide.
+
+Visit the package's website for more information and some insightful
+visualizations: <https://openwashdata.github.io/glaas/>
+
+## 📦 Blog Highlight: Data Sharing Package
+
+Our latest blog post by
+[Adriana](https://openwashdata.org/about/adriana/) introduces
+fairenough: our brand new R package for data publication and sharing. It
+also goes through the motivation for developing our CRAN package washr
+and this next revamped iteration, which minimizes users' input and
+leverages LLMs to automatically produce data dictionaries.
+
+The blog post includes more details about the most important features
+and covers our presentation of this package at LatinR 2025 last year.
+
+Explore fairenough: <https://openwashdata.github.io/fairenough/>
+
+[Read the full blog post
+here](https://openwashdata.org/pages/blog/posts/2026-02-10-fairenough/)
+
+## 🤝 Continued partnership with BASEFlow Malawi
+
+Over the past year, [Emmanuel](https://openwashdata.org/about/emmanuel/)
+has led data quality and publication efforts for WASH datasets and
+supported open data workflows in the global WASH sector as part of
+BASEFlow Malawi. Through our partnership with BASEFlow, he has
+contributed over 15 high-quality datasets to openwashdata. We're pleased
+to announce that this collaboration will continue for another year!
+
+Some of the latest data packages contributed by Emmanuel to the open
+WASH data collection include:
+
+-   `mwgroundwaterdata` -
+    <https://openwashdata.github.io/mwgroundwaterdata>: Malawi
+    Groundwater Monitoring Time-Series Dataset (2024--2025)
+-   `mwefloodresponse` -
+    <https://openwashdata.github.io/mwefloodresponse>: Malawi Emergency
+    Flood Response Water Point Survey (2019--2020)
+-   `waterpointfunctionality` -
+    <https://openwashdata.github.io/waterpointfunctionality>: Water
+    Point Functionality - Malawi, 2022
+
+[You can see our published datasets
+here](https://openwashdata.org/pages/gallery/data/)
+
+## 🌟 Contributor of the Month
+
+This month we want to recognize **Nicolò Massari**, who finished his
+internship with us at the end of 2025. Nicolò designed and implemented
+the core features of fairenough and we're excited to continue the
+development of the package!
+
+## 💼 Join Our Team: Data Science / Software Engineer Internship
+
+We're looking for a new intern to join our Open Science team at Global
+Health Engineering, ETH Zurich! In this role (80--100%), you'll support
+data cleaning and extraction processes, contribute to openwashdata
+packages including washr and fairenough, and help compile metadata for
+ETH's Open Research Data program.
+
+We're looking for someone who cares about concise, reusable code, is
+comfortable with data science tools like Git, GitHub, and the R
+Tidyverse, and stays up to date on the latest developments in LLMs. The
+preferred start date is July 1, 2026, and applications are due by April
+30, 2026.
+
+Questions about the position can be directed to
+[Adriana](https://openwashdata.org/about/adriana/).
+
+[View the full posting and apply
+here](https://jobs.ethz.ch/job/view/JOPG_ethz_AImLu4H3zIaJUVZuBm)
+
+## Get Involved
+
+We believe the openwashdata project prospers when we have **YOU** work
+together and promote open science and data practice! No matter what
+background you are from, we come up with some ways for you to get
+involved:
+
+-   [Join our chatroom to meet
+    people!](https://openwashdata.org/pages/get-started/chat/)
+-   [Share your WASH data with
+    us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/)
+-   Spread the word. Forward this email.
+-   Got more ideas? [Leave us a message on Matrix to
+    collaborate!](https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch)
