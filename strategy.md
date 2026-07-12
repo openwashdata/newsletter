@@ -1,5 +1,9 @@
 # Newsletter Strategy (Phase 1)
 
+> **Note**: This document is superseded by
+> [strategy-growth.md](strategy-growth.md) (Phase 2: engagement and
+> growth to 1,000 subscribers). It is kept for reference.
+
 The first phase of the newsletter focuses on informing the community of our infrastruture and long-term goals.
 
 **Objectives:** 

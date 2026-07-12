@@ -70,6 +70,7 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 ## Project Management with GitHub CLI
 
 - Create branches from `dev`. Do not push to `main`
+- Always open pull requests against `dev`, never against `main`
 - List issues: `gh issue list`
 - View issue details: `gh issue view 80` (e.g., for issue #80 "Rename geographies parameter")
 - Create branch for issue: `gh issue develop 80`
