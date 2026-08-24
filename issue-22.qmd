@@ -14,57 +14,55 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 #| echo: false
 #| include: false
 
-new_pkgs <- c("fecalcanuga",
-              "fslogisticskampala")
+new_pkgs <- c("fecalcanuga")
 
-devtools::install_github(paste0("openwashdata", "/", new_pkgs))
+pak::pak(paste0("openwashdata", "/", new_pkgs))
 
 ```
 
-Welcome back to our newsletter! This month, we look ahead at what comes next for openwashdata, share an updated release of the unhcrwash package, introduce two new data packages, celebrate the graduates of our second data science course, and highlight a collaboration that grew from a course project into a peer-reviewed publication.
+Welcome back to our newsletter! This month, we look ahead at what comes next for openwashdata, share an updated release of the unhcrwash package, highlight a collaboration that grew from a course project into a peer-reviewed publication, and celebrate the graduates of our second data science course.
 
 ## The openwashdata project: what comes next?
 
 The current openwashdata project phase is coming to an end. Our vision and mission remain unchanged, and we are investing in our tooling and securing funding to grow openwashdata further. For the next phase, we are focusing on:
 
-- publishing reproducible, peer-reviewed articles built on openwashdata data packages
+- data publishing: increasing the number of data packages, systematically reviewing their data quality, and identifying potential avenues for a journal dedicated to openwashdata
 - documenting impact: who applies the skills learned in our courses, where, and how
-- continuing to educate on working with AI tools while building foundational data science competencies
+- AI literacy and competency: continuing to educate on working with AI tools while building foundational data science competencies
 
-We have also proposed to host the next AGUASAN meeting in 2027. You can view our proposed idea and concept on GitHub: <https://github.com/Global-Health-Engineering/aguasan>
+We have also proposed to host the 40th AGUASAN meeting in 2027. You can view our proposal on GitHub: <https://github.com/Global-Health-Engineering/aguasan/tree/main/proposal>
 
 <!-- TODO: Add outcome of the AGUASAN pitch (presented 2026-08-25) once known. -->
 
 ## Updated unhcrwash package
 
-We published version 1.1.0 of the unhcrwash R package, which provides WASH indicators collected in refugee camps and settlements between 2013 and 2024. The release corrects the data dictionary and dataset documentation: the data covers 227 sites in 36 countries.
+We published an update of the unhcrwash R package, which provides WASH indicators collected in refugee camps and settlements between 2013 and 2024. The update corrects the data dictionary and dataset documentation: the data covers 227 sites in 36 countries.
 
-The upstream UNHCR WASH dashboard has been retired and the data has moved into a login-gated portal. The dataset in unhcrwash is therefore a fixed historical snapshot that can no longer be regenerated, which makes this openly licensed archive all the more valuable.
+The upstream UNHCR WASH dashboard has been retired and the data has moved into a login-gated portal. The unhcrwash package is now the only openly accessible resource for this data. It is a fixed historical snapshot that can no longer be regenerated, which makes this openly licensed archive all the more valuable.
 
 Visit the package's website for more information: <https://openwashdata.github.io/unhcrwash/>
 
-[Read the full release notes here](https://github.com/openwashdata/unhcrwash/releases/tag/v1.1.0)
+[Read all notes and what has changed](https://github.com/openwashdata/unhcrwash/releases/tag/v1.1.0)
 
 ## Blog Highlight: From course project to published dataset and paper
 
-Our latest blog post tells the story of a collaboration with Kelsey Shaw, a PhD student co-supervised at the University of Victoria (Canada) and Eawag (Switzerland). Kelsey joined our first data science course (ds4owd-001) in 2023 and started working with data she had collected for her PhD research.
+Our latest blog post tells the story of a collaboration with Kelsey Shaw, a PhD student co-supervised at the University of Victoria (Canada) and the Swiss Federal Institute of Aquatic Science and Technology (Eawag, Switzerland). Kelsey joined our first data science course (ds4owd-001) in 2023 and started working with data she had collected for her PhD research.
 
-Two years later, the first paper based on this data is published in *Environmental Science & Technology*, and the underlying dataset is available as the openly licensed R data package fecalcanuga, curated following the openwashdata publication workflow.
+Two years later, the first in a series of papers to come from this primary data collection is now published in *Environmental Science & Technology*, and the underlying dataset is available as an openly licensed R data package, curated following the openwashdata publication workflow:
 
-Explore fecalcanuga: <https://openwashdata.github.io/fecalcanuga/>
+- `fecalcanuga` - <https://openwashdata.github.io/fecalcanuga>: `r packageDescription(new_pkgs[[1]])$Title`
 
 [Read the full blog post here](https://openwashdata.org/pages/blog/posts/2026-06-22-collaboration/)
 
-## New data packages
+<!-- Held back for a dedicated blog post exploring the true values:
+the fslogisticskampala v1.0.0 release and the pkgreview trial that
+caught a decade-old data error (tenfold volume inflation in 12 of 35
+rows from a read_csv2() locale issue; AUS/UAS numberplate
+transpositions merging 35 to 33 trucks across 458 trip records).
+Release notes:
+https://github.com/openwashdata/fslogisticskampala/releases/tag/v1.0.0
+Review PR: https://github.com/openwashdata/fslogisticskampala/pull/8 -->
 
-Two new data packages joined the openwashdata collection:
-
-- `fecalcanuga` - <https://openwashdata.github.io/fecalcanuga>: `r packageDescription(new_pkgs[[1]])$Title`
-- `fslogisticskampala` - <https://openwashdata.github.io/fslogisticskampala>: `r packageDescription(new_pkgs[[2]])$Title`
-
-The fslogisticskampala package contains GPS records of faecal sludge emptying trucks collecting sludge from pit latrines and septic tanks in Kampala, Uganda. It was published through our package review system pkgreview, a structured workflow we are developing to check the consistency, quality, and completeness of every openwashdata data package before publication: <https://github.com/openwashdata/pkgreview>
-
-[You can see our published datasets here](https://openwashdata.org/pages/gallery/data/)
 
 ## Celebrating the ds4owd-002 graduates
 
@@ -85,7 +83,7 @@ The projects selected for presentation at the graduation event were:
 <!-- TODO: Confirm whether ds4owd-003 will run and add dates and registration
 details before sending. Remove this section if not yet confirmed.
 
-## Announcing ds4owd-003
+## Announcing ds4owd-003 (TODO for issue 23, add to gh issue)
 
 Registration for the third edition of our data science for open WASH data
 course opens soon. The course is free, online, and designed for WASH
@@ -95,10 +93,7 @@ professionals with no prior programming experience.
 
 ## Contributor of the Month
 
-This month we want to recognize **Jos van der Ent**, a graduate of the ds4owd-002 course. Jos worked with the Kampala faecal sludge logistics data for his capstone project, presented it at the graduation event, and contributed to the fslogisticskampala data package that is now published in our collection.
-
-<!-- Alternative: Kelsey Shaw, though she is already featured in the blog
-highlight section above. -->
+This month we want to recognize **Jos van der Ent**, a graduate of the ds4owd-002 course. Jos worked with the Kampala faecal sludge logistics data for his capstone project, presented it at the graduation event, and contributed to the fslogisticskampala data package which helped us look into the underlying data resource. More on this in another blog post for the next issue. 
 
 ## Get Involved
 
