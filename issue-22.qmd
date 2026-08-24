@@ -1,0 +1,82 @@
+---
+title: "openwashdata Newsletter - Issue 22"
+date: "2026-08-24"
+format: markdown
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+#| echo: false
+#| include: false
+
+new_pkgs <- c("fecalcanuga")
+
+pak::pak(paste0("openwashdata", "/", new_pkgs))
+
+```
+
+Welcome back to our newsletter! This month, we look ahead at what comes next for openwashdata, share an updated release of the unhcrwash package, highlight a collaboration that grew from a course project into a peer-reviewed publication, and celebrate the graduates of our second data science course.
+
+## 🚀 The openwashdata project: what comes next?
+
+The current openwashdata project phase is coming to an end. Our vision and mission remain unchanged, and we are investing in our tooling and securing funding to grow openwashdata further. For the next phase, we are focusing on:
+
+- **data publishing**: increasing the number of data packages, systematically reviewing their data quality, and identifying publication avenues for WASH data papers, from a special issue in a sector journal to a dedicated venue
+- **documenting impact**: who applies the skills learned in our courses, where, and how
+- **AI literacy and competency**: continuing to educate on working with AI tools while building foundational data science competencies
+
+We have also proposed to host the 40th AGUASAN meeting in 2027. You can view our proposal on GitHub: <https://github.com/Global-Health-Engineering/aguasan/tree/main/proposal>
+
+## 🔍 Updated unhcrwash package
+
+We published an update of the unhcrwash R package, which provides WASH indicators collected in refugee camps and settlements between 2013 and 2024. The update corrects the data dictionary and dataset documentation: the data covers 227 sites in 36 countries.
+
+The upstream UNHCR WASH dashboard has been retired and the data has moved into a login-gated portal. The unhcrwash package is now the only openly accessible resource for this data. It is a fixed historical snapshot that can no longer be regenerated.
+
+Visit the package's website for more information: <https://openwashdata.github.io/unhcrwash/>
+
+[Read all notes and what has changed](https://github.com/openwashdata/unhcrwash/releases/tag/v1.1.0)
+
+## 📄 Blog Highlight: From course project to published dataset and paper
+
+Our latest blog post tells the story of a collaboration with Kelsey Shaw, a PhD student co-supervised at the University of Victoria (Canada) and the Swiss Federal Institute of Aquatic Science and Technology (Eawag, Switzerland). Kelsey joined our first data science course (ds4owd-001) in 2023 and started working with data she had collected for her PhD research.
+
+Two years later, the first in a series of papers to come from this primary data collection is now published in *Environmental Science & Technology*, and the underlying dataset is available as an openly licensed R data package, curated following the openwashdata publication workflow:
+
+- `fecalcanuga` - <https://openwashdata.github.io/fecalcanuga>: `r packageDescription("fecalcanuga")$Title`
+
+[Read the full blog post here](https://openwashdata.org/pages/blog/posts/2026-06-22-collaboration/)
+
+## 🎓 Celebrating the ds4owd-002 graduates
+
+The second edition of our data science for open WASH data course concluded with a graduation event in December 2025. Each graduate completed a capstone project with a dataset of their choice. You can browse all capstone projects, with links to their websites and repositories, in the graduates table: <https://openwashdata.org/pages/academy/graduates-2026/>
+
+The projects selected for presentation at the graduation event were:
+
+- **Sílvia Paiva**: Water inequalities across CPLP member states
+- **Mario Gavidia-Calderón**: Air quality trends in the last decade
+- **Elisha Ochieng Okoth**: Rainfall, temperature, and humidity in Kenya (2021-2024)
+- **Ali Yousefi**: Water insecurity in Iran
+- **Jos van der Ent**: Faecal sludge logistics in Kampala, Uganda
+- **Farah Arbi**: WASH indicators across North African countries
+- **Mejbah Uddin Chowdhury**: Faecal sludge treatment technologies in refugee camps
+
+[Learn more about the graduation event here](https://ds4owd-002.github.io/website/content/modules/md-10.html)
+
+## 🌟 Contributor of the Month
+
+This month we want to recognize **Jos van der Ent**, a graduate of the ds4owd-002 course. Jos worked with the Kampala faecal sludge logistics data for his capstone project, presented it at the graduation event, and contributed to the fslogisticskampala data package which helped us look into the underlying data resource. More on this in another blog post for the next issue. 
+
+## Get Involved
+
+We believe the openwashdata project prospers when we have **YOU** work together and promote open science and data practice! No matter what background you are from, we come up with some ways for you to get involved:
+
+- [Join our chatroom to meet people!](https://openwashdata.org/pages/get-started/chat/)
+- [Share your WASH data with us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/)
+- Spread the word. Forward this email.
+- Got more ideas? [Leave us a message on Matrix to collaborate!](https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch)
