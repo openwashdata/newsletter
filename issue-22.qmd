@@ -26,7 +26,7 @@ Welcome back to our newsletter! This month, we look ahead at what comes next for
 
 The current openwashdata project phase is coming to an end. Our vision and mission remain unchanged, and we are investing in our tooling and securing funding to grow openwashdata further. For the next phase, we are focusing on:
 
-- data publishing: increasing the number of data packages, systematically reviewing their data quality, and identifying potential avenues for a journal dedicated to openwashdata
+- data publishing: increasing the number of data packages, systematically reviewing their data quality, and identifying publication avenues for WASH data papers, from a special issue in a sector journal to a dedicated venue
 - documenting impact: who applies the skills learned in our courses, where, and how
 - AI literacy and competency: continuing to educate on working with AI tools while building foundational data science competencies
 
@@ -38,7 +38,7 @@ We have also proposed to host the 40th AGUASAN meeting in 2027. You can view our
 
 We published an update of the unhcrwash R package, which provides WASH indicators collected in refugee camps and settlements between 2013 and 2024. The update corrects the data dictionary and dataset documentation: the data covers 227 sites in 36 countries.
 
-The upstream UNHCR WASH dashboard has been retired and the data has moved into a login-gated portal. The unhcrwash package is now the only openly accessible resource for this data. It is a fixed historical snapshot that can no longer be regenerated, which makes this openly licensed archive all the more valuable.
+The upstream UNHCR WASH dashboard has been retired and the data has moved into a login-gated portal. The unhcrwash package is now the only openly accessible resource for this data. It is a fixed historical snapshot that can no longer be regenerated.
 
 Visit the package's website for more information: <https://openwashdata.github.io/unhcrwash/>
 
@@ -50,7 +50,7 @@ Our latest blog post tells the story of a collaboration with Kelsey Shaw, a PhD 
 
 Two years later, the first in a series of papers to come from this primary data collection is now published in *Environmental Science & Technology*, and the underlying dataset is available as an openly licensed R data package, curated following the openwashdata publication workflow:
 
-- `fecalcanuga` - <https://openwashdata.github.io/fecalcanuga>: `r packageDescription(new_pkgs[[1]])$Title`
+- `fecalcanuga` - <https://openwashdata.github.io/fecalcanuga>: `r packageDescription("fecalcanuga")$Title`
 
 [Read the full blog post here](https://openwashdata.org/pages/blog/posts/2026-06-22-collaboration/)
 
