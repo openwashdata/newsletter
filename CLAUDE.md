@@ -59,6 +59,9 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 - Avoid overused filler words like "thrilled", "excited", "remarkable", "significantly", "outstanding"
 - Prefer simple, factual descriptions over hyperbolic language
 - Let the content speak for itself without overselling
+- Avoid software development lingo in newsletter text, such as version
+  numbers ("version 1.1.0", "v1.0.0"). Describe package updates in plain
+  language and link to the release notes for details
 - Use 2 spaces for indentation (no tabs)
 - Maximum 80 characters per line
 
