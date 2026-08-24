@@ -62,8 +62,27 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 - Avoid software development lingo in newsletter text, such as version
   numbers ("version 1.1.0", "v1.0.0"). Describe package updates in plain
   language and link to the release notes for details
+- No HTML comments, TODO notes, or held-back content in newsletter
+  files. Open points and future content ideas go to the GitHub issue
+  tracker (or the vault), not into the files
 - Use 2 spaces for indentation (no tabs)
 - Maximum 80 characters per line
+
+## Sending via Buttondown
+
+- Newsletters are sent with Buttondown. Drafts are created via the REST
+  API (`https://api.buttondown.com/v1/emails`); the API key is stored in
+  the macOS keychain (`security find-generic-password -s buttondown -w`)
+- Email subject convention: `openwashdata news XX - <tagline>`, where
+  the tagline is one or two words drawn from the lead story (for
+  example "new faces", "open position", "what's next")
+- Sending is always done manually in the Buttondown UI, never via the
+  API
+- The newsletter uses Atkinson Hyperlegible for all text. The custom
+  CSS in Buttondown's design settings loads the font and must target
+  `ul, ol, li` with `!important` in addition to paragraphs, or list
+  items fall back to Buttondown's serif default
+- Section headings use emojis, following the style of previous issues
 
 ## Key Links Template
 - Chatroom: `https://openwashdata.org/pages/get-started/chat/`
