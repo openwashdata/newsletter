@@ -111,8 +111,25 @@ post. The monthly cycle is:
 
 ## Design
 
-Formatting follows Buttondown. Fonts use Atkinson Hyperlegible where
-Buttondown allows it. Charts use the openwashdata colors.
+Formatting follows Buttondown. The values come from openwashdata/brand
+v1.0.0 (`_brand.yml`); change them there first, then in Buttondown. The
+files under `buttondown/` hold what is pasted into the Buttondown
+settings, so the repository is the record and the UI is the copy:
+
+| Setting (Buttondown) | Value | File |
+|---|---|---|
+| Settings > Email > Accent color | owd-purple `#5b195b` | |
+| Settings > General > Icon | `assets/avatar.png` from the brand repo (square, 1024 px) | |
+| Settings > General > Share image | `assets/social-preview.png` from the brand repo (1280 by 640) | |
+| Settings > Email > Header | badge `logos/OWD-logo-40.png`, linked to the site | `buttondown/email-header.html` |
+| Settings > Email > Footer | site, GitHub and chat links, unsubscribe line | `buttondown/email-footer.html` |
+| Settings > Email > CSS | headings owd-purple, links owd-blue, code on owd-purple-bg, ink text | `buttondown/email.css` |
+| Settings > Archives > CSS | the same colours plus Atkinson Hyperlegible Next and Source Code Pro from Google Fonts | `buttondown/web.css` |
+
+Fonts: Atkinson Hyperlegible Next for text, Source Code Pro for code.
+Mail clients mostly ignore web fonts, so the email falls back to Arial
+or Helvetica; the web archive renders in the brand fonts. Charts use
+the brand colours.
 
 ## Analytics
 
