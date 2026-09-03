@@ -14,7 +14,8 @@ Welcome back to our newsletter! This month, we introduce the jmpdata
 package with the sanitation data behind the WHO/UNICEF Joint Monitoring
 Programme estimates, show it as our first dataset of the month, and
 share an update of the washopenresearch package with a look at where
-WASH data papers deposit their data.
+WASH data papers deposit their data. We also announce quarto-owd, our
+Quarto extension for PDF and Word documents in the openwashdata brand.
 
 ## 📦 New package: jmpdata
 
@@ -75,6 +76,33 @@ Visit the package's website for more information:
 
 [Read all notes and what has
 changed](https://github.com/openwashdata/washopenresearch/releases/tag/v0.3.0)
+
+## Branded PDF and Word documents with quarto-owd
+
+Reports about openwashdata datasets can now carry the openwashdata look
+without manual formatting. quarto-owd is a Quarto extension with two
+output formats: `owd-typst` produces a PDF through Typst, `owd-docx` a
+Word document. Both take their colours, fonts and logo from the brand
+definition in the openwashdata/brand repository, the same file that
+styles the data package websites since washr 1.1.0. Version 0.4.0 puts
+the title, authors and abstract on a cover page with the table of
+contents, starts the body on page 1, and styles tables in both formats.
+
+The brand itself has reached version 1.0.0. Its guide shows the palette,
+the typeface, the logos and dark mode, and how each tool reads the file:
+<https://openwashdata.github.io/brand/>
+
+To start a document:
+
+    quarto use template openwashdata/quarto-owd
+
+In an existing project, `quarto add openwashdata/quarto-owd` and
+`quarto use brand openwashdata/brand` do the same. Data package authors
+who have run `washr::use_brand()` already have the brand file in place
+and only need `quarto add openwashdata/quarto-owd`.
+
+Repository and documentation:
+<https://github.com/openwashdata/quarto-owd>
 
 ## Get Involved
 
