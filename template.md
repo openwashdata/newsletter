@@ -1,3 +1,5 @@
+[View this email in your browser]({{ email_url }})
+
 Greetings here
 
 ## [emoji] HIGHLIGHT 1
@@ -7,6 +9,11 @@ Greetings here
 
 
 [Read more here]()
+
+## 📊 Dataset of the Month: [package]
+
+[chart with alt text and stats line, generated with R/card.R; see
+card-template.qmd for the chunks to copy into the issue .qmd]
 
 ## openwashdata Blog: title
 ---
