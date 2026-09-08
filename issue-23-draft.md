@@ -10,12 +10,43 @@ toc-title: Table of contents
 
 [View this email in your browser]({{ email_url }})
 
-Welcome back to our newsletter! This month, we introduce the jmpdata
-package with the sanitation data behind the WHO/UNICEF Joint Monitoring
-Programme estimates, show it as our first dataset of the month, and
-share an update of the washopenresearch package with a look at where
-WASH data papers deposit their data. We also announce quarto-owd, our
-Quarto extension for PDF and Word documents in the openwashdata brand.
+\<\<\<\<\<\<\< Updated upstream Welcome back to our newsletter! This
+month, we introduce the jmpdata package with the sanitation data behind
+the WHO/UNICEF Joint Monitoring Programme estimates, show it as our
+first dataset of the month, and share an update of the washopenresearch
+package with a look at where WASH data papers deposit their data. We
+also announce quarto-owd, our Quarto extension for PDF and Word
+documents in the openwashdata brand. ======= Welcome back to our
+newsletter! This month, openwashdata has a new look, with a brand guide
+and a reworked landing page. We introduce the jmpdata package with the
+sanitation data behind the WHO/UNICEF Joint Monitoring Programme
+estimates, show solidwastekampala, a new package on household waste in
+Kampala, as our first dataset of the month, share an update of the
+washopenresearch package with a look at where WASH data papers deposit
+their data, pass on two reflections by Emmanuel Mhango on his year as
+Data Steward at BASEflow Malawi, and thank Charles Niwagaba as our
+contributor of the month.
+
+## 🎨 A new look for openwashdata
+
+openwashdata has a brand guide. One file defines the colours, the
+typography and the logos, and the website and this newsletter read their
+look from it. The palette keeps our purple and orange, with the orange
+darkened so that it reads well as text, and adds green, red and grey
+accents. All text is set in Atkinson Hyperlegible Next, a typeface
+designed for legibility at small sizes and for readers with low vision.
+The guide shows the palette with its contrast table, the logos and their
+rules, a dark mode, and themed charts and tables.
+
+The website is the first place to see it. openwashdata.org now takes its
+colours, fonts and logos from the brand files and comes with a light and
+a dark mode. The landing page has a new layout as well: it shows the
+datasets we publish, the latest blog posts and upcoming events at a
+glance, together with the dataset of the month, and has a button to
+subscribe to this newsletter.
+
+[Browse the brand guide](https://openwashdata.github.io/brand/)
+\>\>\>\>\>\>\> Stashed changes
 
 ## 📦 New package: jmpdata
 
@@ -42,20 +73,28 @@ safely managed sanitation rest on comparatively few raw data points.
 [Read all notes and what has
 changed](https://github.com/openwashdata/jmpdata/releases/tag/v0.1.0)
 
-## 📊 Dataset of the Month: jmpdata
+## 📊 Dataset of the Month: solidwastekampala
 
 Starting with this issue, each newsletter shows one chart made from the
-data of a featured package. The first chart shows the raw data points in
-jmpdata per year. These 26,926 data points are the basis for the 424,575
-modelled estimates that the JMP publishes.
+data of a featured package. The first is solidwastekampala, a new data
+package from Makerere University with the quantity and composition of
+domestic solid waste from 103 households in three Kampala parishes of
+low, middle and high income, weighed over one week. Waste per person
+rises with income, from 0.43 to 0.98 kg per day, and food makes up at
+least three quarters of the mass in every parish.
 
-![Bar chart of survey-level sanitation data points in the JMP raw data
-per year, from 1991 to 2024. Most years since 2000 hold between 500 and
-1,800 data points, with a peak of 1,805 in 2018 and fewer points in the
-most recent years.](images/card-jmpdata.png)
+- `solidwastekampala` -
+  <https://openwashdata.github.io/solidwastekampala>: Quantity and
+  Composition of Domestic Solid Waste in Kampala City
 
-26,926 observations \| 232 countries and territories \| CC BY 4.0 \|
-<https://openwashdata.github.io/jmpdata>
+![Stacked bar chart of the share of household waste mass by category for
+the low, middle and high income parishes in Kampala. Food makes up 75 to
+82 percent in each parish. Garden and wood, plastics and polythene,
+other waste, paper and textiles, and glass and metals share the
+rest.](images/card-solidwastekampala.png)
+
+103 observations \| Kampala, Uganda \| CC BY 4.0 \|
+<https://openwashdata.github.io/solidwastekampala>
 
 ## 🔍 Updated washopenresearch package
 
@@ -77,7 +116,8 @@ Visit the package's website for more information:
 [Read all notes and what has
 changed](https://github.com/openwashdata/washopenresearch/releases/tag/v0.3.0)
 
-## Branded PDF and Word documents with quarto-owd
+\<\<\<\<\<\<\< Updated upstream \## Branded PDF and Word documents with
+quarto-owd
 
 Reports about openwashdata datasets can now carry the openwashdata look
 without manual formatting. quarto-owd is a Quarto extension with two
@@ -102,7 +142,35 @@ who have run `washr::use_brand()` already have the brand file in place
 and only need `quarto add openwashdata/quarto-owd`.
 
 Repository and documentation:
-<https://github.com/openwashdata/quarto-owd>
+<https://github.com/openwashdata/quarto-owd> ======= \## 📄 Blog
+Highlights: a year as Data Steward at BASEflow Malawi
+
+Emmanuel Mhango works as Data Steward at BASEflow Malawi within the
+openwashdata project and has published five WASH datasets with us. He
+wrote two reflections on that year, first published on LinkedIn and now
+on our blog.
+
+The first post starts with one question, what data does the organization
+actually have, and follows the answer from a data inventory to a Data
+Management Strategy, and to the lesson that data stewardship begins with
+people. The second looks at what happened once BASEflow started
+publishing data: the questions Open Science raised about ownership,
+permission and documentation, and a groundwater dataset that UNICEF
+Malawi used to identify where boreholes need attention.
+
+- [I thought my job was about data. It turned out to be about
+  people.](https://openwashdata.org/pages/blog/posts/2026-08-11-job-about-data/)
+- [Beyond publishing data: what we learned building an open science
+  culture at BASEflow
+  Malawi](https://openwashdata.org/pages/blog/posts/2026-08-18-beyond-publishing-data/)
+
+## 🌟 Contributor of the Month
+
+Our contributor of the month is Charles Niwagaba of Makerere University,
+who shared the household solid waste data behind the solidwastekampala
+package with the community. The package names the whole team that
+collected the data in Kampala as authors. Thank you, Charles.
+\>\>\>\>\>\>\> Stashed changes
 
 ## Get Involved
 
