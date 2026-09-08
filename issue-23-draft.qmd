@@ -27,15 +27,6 @@ for (pkg in new_pkgs) {
 [View this email in your browser]({{ email_url }})
 ```
 
-<<<<<<< Updated upstream
-Welcome back to our newsletter! This month, we introduce the jmpdata
-package with the sanitation data behind the WHO/UNICEF Joint
-Monitoring Programme estimates, show it as our first dataset of the
-month, and share an update of the washopenresearch package with a
-look at where WASH data papers deposit their data. We also announce
-quarto-owd, our Quarto extension for PDF and Word documents in the
-openwashdata brand.
-=======
 Welcome back to our newsletter! This month, openwashdata has a new
 look, with a brand guide and a reworked landing page. We introduce the
 jmpdata package with the sanitation data behind the WHO/UNICEF Joint
@@ -43,8 +34,10 @@ Monitoring Programme estimates, show solidwastekampala, a new package
 on household waste in Kampala, as our first dataset of the month,
 share an update of the washopenresearch package with a look at where
 WASH data papers deposit their data, pass on two reflections by
-Emmanuel Mhango on his year as Data Steward at BASEflow Malawi, and
-thank Charles Niwagaba as our contributor of the month.
+Emmanuel Mhango on his year as Data Steward at BASEflow Malawi,
+announce quarto-owd, our Quarto extension for PDF and Word documents
+in the openwashdata brand, and thank Charles Niwagaba as our
+contributor of the month.
 
 ## 🎨 A new look for openwashdata
 
@@ -65,7 +58,6 @@ events at a glance, together with the dataset of the month, and has a
 button to subscribe to this newsletter.
 
 [Browse the brand guide](https://openwashdata.github.io/brand/)
->>>>>>> Stashed changes
 
 ## 📦 New package: jmpdata
 
@@ -208,7 +200,6 @@ Visit the package's website for more information:
 [Read all notes and what has
 changed](https://github.com/openwashdata/washopenresearch/releases/tag/v0.3.0)
 
-<<<<<<< Updated upstream
 ## Branded PDF and Word documents with quarto-owd
 
 Reports about openwashdata datasets can now carry the openwashdata
@@ -221,9 +212,8 @@ Version 0.4.0 puts the title, authors and abstract on a cover page
 with the table of contents, starts the body on page 1, and styles
 tables in both formats.
 
-The brand itself has reached version 1.0.0. Its guide shows the
-palette, the typeface, the logos and dark mode, and how each tool
-reads the file: <https://openwashdata.github.io/brand/>
+The extension reads the same brand file as the website, so a report
+and the site share one look.
 
 To start a document:
 
@@ -238,7 +228,7 @@ file in place and only need `quarto add openwashdata/quarto-owd`.
 
 Repository and documentation:
 <https://github.com/openwashdata/quarto-owd>
-=======
+
 ## 📄 Blog Highlights: a year as Data Steward at BASEflow Malawi
 
 Emmanuel Mhango works as Data Steward at BASEflow Malawi within the
@@ -268,7 +258,6 @@ University, who shared the household solid waste data behind the
 solidwastekampala package with the community. The package names the
 whole team that collected the data in Kampala as authors. Thank you,
 Charles.
->>>>>>> Stashed changes
 
 ## Get Involved
 
