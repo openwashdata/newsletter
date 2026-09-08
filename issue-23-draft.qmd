@@ -152,8 +152,8 @@ shares <- shares |>
   )
 
 # chart-1 to chart-6 from openwashdata/brand
-chart_colours <- c("#8a3a8a", "#b04208", "#3b5bdb", "#1f8a5f", "#b8860b",
-  "#c2477a")
+chart_colours <- c("#8a3a8a", "#b04208", "#CF9E40", "#006840", "#FD7AAD",
+  "#304FC2")
 
 p <- ggplot(shares, aes(x = label, y = share, fill = group)) +
   geom_col(width = 0.62) +
