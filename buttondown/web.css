@@ -1,0 +1,67 @@
+/* openwashdata newsletter: web archive CSS
+ *
+ * Paste into Buttondown, Settings > Archives > CSS.
+ * Values from openwashdata/brand v1.0.0 (_brand.yml). Change them there
+ * first, then here. The archive runs in a browser, so web fonts and
+ * custom properties work here.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap');
+
+/* Design tokens of Buttondown's modern archive theme. */
+:root {
+  --color-action: #5b195b;        /* owd-purple: buttons and UI accents */
+  --color-background: #f4f4f4;    /* paper */
+  --font-brand: 'Atkinson Hyperlegible Next', sans-serif;
+  --font-prose: 'Atkinson Hyperlegible Next', sans-serif;
+}
+
+body,
+.email-body,
+.newsletter-name,
+.subject,
+.email-title,
+.email-metadata,
+.header-brand-name,
+ul, ol, li {
+  font-family: 'Atkinson Hyperlegible Next', sans-serif !important;
+  color: #1e1e1e;                 /* ink */
+}
+
+h1, h2, h3, h4, h5, h6,
+.subject,
+.email-title {
+  color: #5b195b;                 /* owd-purple, primary */
+  font-weight: 700;
+}
+
+.email-body a,
+.email-teaser a {
+  color: #272bd1;                 /* owd-blue, links */
+  text-decoration: underline;
+}
+
+code, pre {
+  font-family: 'Source Code Pro', monospace;
+  background-color: #f5eef5;      /* owd-purple-bg */
+}
+
+code {
+  padding: 0.1em 0.25em;
+  border-radius: 0.25rem;
+}
+
+pre {
+  padding: 0.5rem;
+}
+
+.email-metadata,
+.email-metadata-publish-date-text,
+.email-metadata-issue-number-text {
+  color: #5c5c5c;                 /* owd-grey, secondary */
+}
+
+.survey {
+  text-align: center;
+}

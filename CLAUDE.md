@@ -78,10 +78,11 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
   example "new faces", "open position", "what's next")
 - Sending is always done manually in the Buttondown UI, never via the
   API
-- The newsletter uses Atkinson Hyperlegible for all text. The custom
-  CSS in Buttondown's design settings loads the font and must target
-  `ul, ol, li` with `!important` in addition to paragraphs, or list
-  items fall back to Buttondown's serif default
+- The newsletter uses Atkinson Hyperlegible Next for all text, from
+  openwashdata/brand v1.0.0. The CSS pasted into Buttondown's design
+  settings lives in `buttondown/` (see strategy.md, Design) and must
+  target `ul, ol, li` with `!important` in addition to paragraphs, or
+  list items fall back to Buttondown's serif default
 - Section headings use emojis, following the style of previous issues
 
 ## Key Links Template

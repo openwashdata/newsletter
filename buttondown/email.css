@@ -1,0 +1,76 @@
+/* openwashdata newsletter: email CSS
+ *
+ * Paste into Buttondown, Settings > Email > CSS.
+ * Values from openwashdata/brand v1.0.0 (_brand.yml). Change them there
+ * first, then here. Email clients read CSS from around 2005, so this
+ * file stays with fonts, colours and underlines. The web font reaches
+ * clients that load it (Apple Mail); the rest fall back to the stack.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap');
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+table,
+tr,
+td,
+* {
+  font-family: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', Arial, Helvetica, sans-serif;
+  color: #1e1e1e;                 /* ink */
+}
+
+/* Buttondown's list items fall back to a serif without this rule. */
+ul, ol, li {
+  font-family: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', Arial, Helvetica, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #5b195b !important;      /* owd-purple, primary */
+  font-weight: 700;
+}
+
+a {
+  color: #272bd1 !important;      /* owd-blue, links */
+  text-decoration: underline;
+}
+
+code {
+  font-family: 'Source Code Pro', Menlo, Consolas, 'Courier New', monospace;
+  background-color: #f5eef5;      /* owd-purple-bg */
+  padding: 1px 3px;
+}
+
+pre {
+  font-family: 'Source Code Pro', Menlo, Consolas, 'Courier New', monospace;
+  background-color: #f5eef5;      /* owd-purple-bg */
+  padding: 8px;
+}
+
+.newsletter-header {
+  text-align: left;
+  padding-bottom: 12px;
+}
+
+.newsletter-footer {
+  padding-top: 16px;
+  font-size: 13px;
+  color: #5c5c5c;                 /* owd-grey, secondary */
+}
+
+.newsletter-footer a {
+  color: #5c5c5c !important;
+}
+
+.survey {
+  text-align: center;
+}
