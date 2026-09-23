@@ -53,6 +53,15 @@ rest.](images/card-solidwastekampala.png)
 103 observations \| Kampala, Uganda \| CC BY 4.0 \|
 <https://openwashdata.github.io/solidwastekampala>
 
+The package took a couple of hours to build. Our data publishing
+pipeline has matured to the point where we can take a dataset in any
+format, with minimal documentation from the author, and turn it into a
+complete data package with documented variables, a website and a
+citation. This is possible because agentic AI tools now work together
+with the data publishing software we have invested in for years. Going
+forward, openwashdata will focus more on giving others the opportunity
+to benefit from these possibilities.
+
 ## 📄 Blog Highlights: a year as Data Steward at BASEflow Malawi
 
 Emmanuel Mhango works as Data Steward at BASEflow Malawi within the
