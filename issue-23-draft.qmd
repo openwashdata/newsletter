@@ -60,6 +60,13 @@ week. Waste per person rises with income, from 0.43 to 0.98 kg per
 day, and food makes up at least three quarters of the mass in every
 parish.
 
+The package holds the raw data as collected, before the analysis in
+the paper the team published this month in Frontiers in
+Environmental Science, [Quantity and composition of domestic solid
+waste in Kampala City as influenced by socioeconomic
+factors](https://doi.org/10.3389/fenvs.2026.1889921). Anyone can
+start from the same records the authors worked with.
+
 - `solidwastekampala` -
   <https://openwashdata.github.io/solidwastekampala>:
   `r packageDescription("solidwastekampala")$Title`
@@ -182,6 +189,14 @@ University, who shared the household solid waste data behind the
 solidwastekampala package with the community. The package names the
 whole team that collected the data in Kampala as authors. Thank you,
 Charles.
+
+Charles and his co-authors published their raw data with us before
+the analysis, and their paper came out in Frontiers in Environmental
+Science on 11 September. This is the second publication where
+authors have worked with us to publish the raw data behind a paper.
+We are looking for more volunteers. If you have a manuscript in
+progress and data you can share, [share your data with
+us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/).
 
 ## Get Involved
 
