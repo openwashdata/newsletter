@@ -22,14 +22,15 @@ the same colours, fonts and logos, in a light and a dark mode. The
 landing page shows the dataset of the month, the latest blog posts and a
 button to subscribe to this newsletter.
 
+Let us know how you like it:
+[openwashdata.org](https://openwashdata.org/)
+
 Every blog post is now also available as a PDF for download, so you can
 read it offline or pass it on. Reports about openwashdata datasets can
 carry the same look through our [quarto-owd
 extension](https://github.com/openwashdata/quarto-owd), which produces
-PDF and Word documents.
-
-[See the new website](https://openwashdata.org) and [browse the brand
-guide](https://openwashdata.github.io/brand/)
+PDF and Word documents. Browse the brand guide at:
+<https://openwashdata.github.io/brand/>.
 
 ## 📊 Dataset of the Month: solidwastekampala
 
@@ -92,10 +93,12 @@ Malawi used to identify where boreholes need attention.
 
 ## 🌟 Contributor of the Month
 
-Our contributor of the month is Charles Niwagaba of Makerere University,
-who shared the household solid waste data behind the solidwastekampala
-package with the community. The package names the whole team that
-collected the data in Kampala as authors. Thank you, Charles.
+Our contributor of the month is [Charles
+Niwagaba](https://www.linkedin.com/in/charles-b-niwagaba-89652a154/) of
+Makerere University, who shared the household solid waste data behind
+the solidwastekampala package with the community. The package names the
+whole team that collected the data in Kampala as authors. Thank you,
+Charles.
 
 Charles and his co-authors published their raw data with us before the
 analysis, and their paper came out in Frontiers in Environmental Science
