@@ -94,20 +94,21 @@ the newsletter sign-up page.
 
 ## Cadence and production
 
-Issues go out monthly on the first Monday, starting 2026-10-05. We did
-not hold the monthly cadence in 2025, and issue 18 followed a four month
-gap. Sending a short issue on time beats sending a long issue late, so a
+Issues go out monthly on the second last Wednesday of the month,
+starting 2026-09-23 with issue 23, and the LinkedIn post follows on the
+Thursday morning after the send. We did not hold the monthly cadence in
+2025, and issue 18 followed a four month gap. Sending a short issue on time beats sending a long issue late, so a
 thin month still gets an issue with a greeting, one highlight, the card,
 and the question.
 
 The production budget is four hours per issue, not counting the blog
 post. The monthly cycle is:
 
-- Week 1: send the issue, post the chart to LinkedIn and the website,
-  archive the previous issue.
-- Week 2 and 3: read the poll answers, collect highlights for the next
-  issue.
-- Week 4: draft and review the next issue.
+- Send week: send the issue on Wednesday, post the chart to LinkedIn on
+  Thursday and to the website, archive the previous issue.
+- The two weeks after: read the poll answers, collect highlights for
+  the next issue.
+- The week before the next send: draft and review the next issue.
 
 ## Design
 
