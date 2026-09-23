@@ -21,7 +21,8 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 ### Template and Strategy
 - `template.md` provides the standard newsletter structure
 - `strategy.md` contains content guidelines and publishing schedule
-- Newsletter follows monthly cycle (first Monday of each month)
+- Newsletter follows a monthly cycle: sent on the second last Wednesday
+  of each month, LinkedIn post on the Thursday after
 
 ## Newsletter Content Structure
 
@@ -49,10 +50,10 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 
 ## Monthly Publishing Cycle
 
-- **Week 1**: Send newsletter
-- **Week 2**: Archive previous issue, collect feedback  
-- **Week 3**: Write blog content, choose highlights
-- **Week 4**: Write and review next newsletter
+- **Send week**: send the issue on Wednesday (second last Wednesday of
+  the month), LinkedIn post on Thursday, archive the previous issue
+- **The two weeks after**: read the poll answers, collect highlights
+- **The week before the next send**: write and review the next issue
 
 ## Writing Style and Tone
 - Use clear, direct language without excessive superlatives
@@ -78,6 +79,13 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
   example "new faces", "open position", "what's next")
 - Sending is always done manually in the Buttondown UI, never via the
   API
+- The draft body is the rendered markdown without the YAML header,
+  prefixed with `<!-- buttondown-editor-mode: plaintext -->`. Images
+  are uploaded to Buttondown's image hosting first (`POST
+  https://api.buttondown.com/v1/images`) and the body references that
+  URL; the repo keeps the relative path under `images/`
+- Edits made in the Buttondown editor are lost on the next body update
+  from the repo, so edit the qmd and re-render instead
 - The newsletter uses Atkinson Hyperlegible Next for all text, from
   openwashdata/brand v1.0.0. The CSS pasted into Buttondown's design
   settings lives in `buttondown/` (see strategy.md, Design) and must
