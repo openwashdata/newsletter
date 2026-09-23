@@ -79,6 +79,13 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
   example "new faces", "open position", "what's next")
 - Sending is always done manually in the Buttondown UI, never via the
   API
+- The draft body is the rendered markdown without the YAML header,
+  prefixed with `<!-- buttondown-editor-mode: plaintext -->`. Images
+  are uploaded to Buttondown's image hosting first (`POST
+  https://api.buttondown.com/v1/images`) and the body references that
+  URL; the repo keeps the relative path under `images/`
+- Edits made in the Buttondown editor are lost on the next body update
+  from the repo, so edit the qmd and re-render instead
 - The newsletter uses Atkinson Hyperlegible Next for all text, from
   openwashdata/brand v1.0.0. The CSS pasted into Buttondown's design
   settings lives in `buttondown/` (see strategy.md, Design) and must
