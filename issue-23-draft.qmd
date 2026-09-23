@@ -76,75 +76,90 @@ start from the same records the authors worked with.
 #| include: false
 
 library(dplyr)
-library(tidyr)
 library(ggplot2)
 source("R/card.R")
 
 card <- owd_card_stats("solidwastekampala", countries = "Kampala, Uganda")
 
-groups <- c(
-  waste_food_kg = "Food",
-  waste_garden_kg = "Garden and wood",
-  waste_wood_kg = "Garden and wood",
-  waste_polythene_kg = "Plastics and polythene",
-  waste_plastics_kg = "Plastics and polythene",
-  waste_paper_kg = "Paper and textiles",
-  waste_textiles_kg = "Paper and textiles",
-  waste_glass_kg = "Glass and metals",
-  waste_metals_kg = "Glass and metals",
-  waste_other_kg = "Other"
-)
+# The same chart as the dataset of the month on openwashdata.org
+# (index.qmd, Observable Plot with dodgeY), drawn once as a static
+# image: one dot per household, one row per income level, the median
+# of each row as a line.
+households <- card$data |>
+  transmute(
+    income_level = as.character(income_level),
+    parish,
+    per_capita = round(waste_per_capita_kg, 2)
+  ) |>
+  mutate(income_level = factor(income_level,
+    levels = c("low", "middle", "high"))) |>
+  arrange(income_level, per_capita)
 
-shares <- card$data |>
-  select(income_level, parish, all_of(names(groups))) |>
-  pivot_longer(starts_with("waste_"), names_to = "category",
-    values_to = "kg") |>
-  mutate(group = unname(groups[category])) |>
-  summarise(kg = sum(kg, na.rm = TRUE),
-    .by = c(income_level, parish, group)) |>
-  mutate(share = kg / sum(kg), .by = income_level)
-
-group_order <- shares |>
-  summarise(kg = sum(kg), .by = group) |>
-  arrange(desc(kg)) |>
-  pull(group)
-
-parish_labels <- shares |>
-  distinct(income_level, parish) |>
+medians <- households |>
+  summarise(median = round(median(per_capita), 2), n = n(),
+    .by = c(income_level, parish)) |>
   arrange(income_level) |>
-  mutate(label = paste0(tools::toTitleCase(as.character(income_level)),
-    " income\n(", parish, ")"))
+  mutate(label = sprintf("%s income (%s), %d households",
+    tools::toTitleCase(as.character(income_level)), parish, n))
 
-shares <- shares |>
-  left_join(parish_labels, by = c("income_level", "parish")) |>
-  mutate(
-    group = factor(group, levels = rev(group_order)),
-    label = factor(label, levels = parish_labels$label)
-  )
+households <- households |>
+  left_join(select(medians, income_level, label), by = "income_level") |>
+  mutate(label = factor(label, levels = medians$label))
 
-# chart-1 to chart-6 from openwashdata/brand
-chart_colours <- c("#8a3a8a", "#b04208", "#CF9E40", "#006840", "#FD7AAD",
-  "#304FC2")
+# the median layers carry their own data, so they need the same
+# factor levels or ggplot orders the rows alphabetically
+medians <- medians |>
+  mutate(label = factor(label, levels = levels(households$label)))
 
-p <- ggplot(shares, aes(x = label, y = share, fill = group)) +
-  geom_col(width = 0.62) +
-  scale_y_continuous(labels = scales::percent,
-    expand = expansion(mult = c(0, 0.02))) +
-  scale_fill_manual(values = chart_colours, breaks = group_order) +
+# dodge: bins of one dot width along x, points stacked around the row
+# centre, the same idea as Plot.dodgeY("middle") on the website
+dot_width <- 0.045
+households <- households |>
+  mutate(bin = floor(per_capita / dot_width), .by = label) |>
+  mutate(offset = row_number() - (n() + 1) / 2, .by = c(label, bin))
+
+# chart-1 and chart-2 from openwashdata/brand
+palette <- c("#8a3a8a", "#b04208")
+font <- "Atkinson Hyperlegible Next"
+
+p <- ggplot(households, aes(x = per_capita, y = offset)) +
+  geom_vline(data = medians, aes(xintercept = median),
+    colour = palette[2], linewidth = 0.8) +
+  geom_point(size = 2.4, shape = 21, fill = palette[1], colour = "white",
+    stroke = 0.35, alpha = 0.75) +
+  geom_text(data = medians, aes(x = median, y = -4.1,
+    label = sprintf("median %s kg", format(median, nsmall = 2))),
+    hjust = 0, nudge_x = 0.025, colour = palette[2], fontface = "bold",
+    family = font, size = 3.4) +
+  facet_wrap(~label, ncol = 1) +
+  scale_x_continuous(limits = c(0, 2), breaks = seq(0, 2, 0.5),
+    expand = expansion(mult = c(0.01, 0.02))) +
+  scale_y_continuous(limits = c(-4.5, 4.5)) +
   labs(
-    title = "Food makes up most of the household waste in Kampala",
-    subtitle = paste("Share of waste mass by category,",
-      "103 households in three parishes, one week"),
-    x = NULL, y = NULL, fill = NULL
+    title = "Waste per person rises with income",
+    subtitle = paste("One dot per household: kg of waste per person",
+      "per day, with the median of each income level"),
+    x = "kg of waste per person per day", y = NULL
   ) +
   theme_owd() +
-  theme(legend.position = "right", legend.key.size = unit(0.9, "lines"))
+  theme(
+    text = element_text(family = font),
+    panel.grid.major.x = element_line(colour = "#e3e3e3"),
+    panel.grid.major.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    strip.text = element_text(hjust = 0, face = "bold",
+      colour = owd_colors[["dark"]], size = 11),
+    strip.background = element_blank(),
+    panel.spacing.y = unit(0.6, "lines"),
+    axis.title.x = element_text(colour = owd_colors[["gray"]], size = 10)
+  )
 
-img <- owd_card_save(p, card, alt = "Stacked bar chart of the share of
-  household waste mass by category for the low, middle and high income
-  parishes in Kampala. Food makes up 75 to 82 percent in each parish.
-  Garden and wood, plastics and polythene, other waste, paper and
-  textiles, and glass and metals share the rest.")
+img <- owd_card_save(p, card, alt = "Dot plot of waste per person per
+  day for 103 households in Kampala, one row per income level. The
+  median rises from 0.32 kg in the low income parish to 0.57 in the
+  middle income parish and 0.93 in the high income parish. Households
+  spread from near zero to about 1.9 kg.")
 ```
 
 `r img`
@@ -196,7 +211,7 @@ Science on 11 September. This is the second publication where
 authors have worked with us to publish the raw data behind a paper.
 We are looking for more volunteers. If you have a manuscript in
 progress and data you can share, [share your data with
-us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/).
+us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/) or send us an E-Mail at ghe@mavt.ethz.ch.
 
 ## Get Involved
 

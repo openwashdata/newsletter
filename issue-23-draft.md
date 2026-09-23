@@ -51,11 +51,11 @@ from the same records the authors worked with.
   <https://openwashdata.github.io/solidwastekampala>: Quantity and
   Composition of Domestic Solid Waste in Kampala City
 
-![Stacked bar chart of the share of household waste mass by category for
-the low, middle and high income parishes in Kampala. Food makes up 75 to
-82 percent in each parish. Garden and wood, plastics and polythene,
-other waste, paper and textiles, and glass and metals share the
-rest.](images/card-solidwastekampala.png)
+![Dot plot of waste per person per day for 103 households in Kampala,
+one row per income level. The median rises from 0.32 kg in the low
+income parish to 0.57 in the middle income parish and 0.93 in the high
+income parish. Households spread from near zero to about 1.9
+kg.](images/card-solidwastekampala.png)
 
 103 observations \| Kampala, Uganda \| CC BY 4.0 \|
 <https://openwashdata.github.io/solidwastekampala>
@@ -103,7 +103,8 @@ on 11 September. This is the second publication where authors have
 worked with us to publish the raw data behind a paper. We are looking
 for more volunteers. If you have a manuscript in progress and data you
 can share, [share your data with
-us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/).
+us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/)
+or send us an E-Mail at ghe@mavt.ethz.ch.
 
 ## Get Involved
 
