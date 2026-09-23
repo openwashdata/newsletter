@@ -73,9 +73,9 @@ to benefit from these possibilities.
 ## 📄 Blog Highlights: a year as Data Steward at BASEflow Malawi
 
 Emmanuel Mhango works as Data Steward at BASEflow Malawi within the
-openwashdata project and has published five WASH datasets with us. He
-wrote two reflections on that year, first published on LinkedIn and now
-on our blog.
+openwashdata project and has published more than ten WASH datasets with
+us. He wrote two reflections on that year, first published on LinkedIn
+and now on our blog.
 
 The first post starts with one question, what data does the organization
 actually have, and follows the answer from a data inventory to a Data
