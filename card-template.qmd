@@ -1,6 +1,8 @@
 ---
 title: "Dataset of the month: card template"
-format: markdown
+format:
+  markdown:
+    wrap: none
 editor_options:
   chunk_output_type: console
 ---
