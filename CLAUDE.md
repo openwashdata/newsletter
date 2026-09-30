@@ -43,6 +43,11 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 - Use R chunks to dynamically pull package descriptions
 - Example: `packageDescription(new_pkgs[[1]])$Title`
 - Install packages with: `devtools::install_github(paste0("openwashdata", "/", new_pkgs))`
+- Every issue `.qmd` sets `wrap: none` under `format: markdown` in the
+  YAML header (see `card-template.qmd`), so the rendered `.md` has one
+  line per paragraph and list item. Issue 23 was rendered with the
+  default wrapping at 72 characters, and Buttondown turned every line
+  end into a line break in the email and the web archive
 
 ### Package Information
 - New packages are defined in R vectors at the top of .qmd files
@@ -67,7 +72,9 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
   files. Open points and future content ideas go to the GitHub issue
   tracker (or the vault), not into the files
 - Use 2 spaces for indentation (no tabs)
-- Maximum 80 characters per line
+- Maximum 80 characters per line in the files written by hand (`.qmd`,
+  `CLAUDE.md`, `strategy.md`). The rendered `.md` of an issue is not
+  wrapped
 
 ## Sending via Buttondown
 
@@ -86,6 +93,12 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
   URL; the repo keeps the relative path under `images/`
 - Edits made in the Buttondown editor are lost on the next body update
   from the repo, so edit the qmd and re-render instead
+- Leave the draft in markdown mode in the Buttondown editor. Saving it
+  in the rich text ("fancy") mode converts the body to HTML and keeps
+  every line end of a wrapped paragraph as `<br>`
+- Before the send, read the draft back from the API and check that the
+  body still starts with `<!-- buttondown-editor-mode: plaintext -->`
+  and contains no `<br>`
 - The newsletter uses Atkinson Hyperlegible Next for all text, from
   openwashdata/brand v1.0.0. The CSS pasted into Buttondown's design
   settings lives in `buttondown/` (see strategy.md, Design) and must
