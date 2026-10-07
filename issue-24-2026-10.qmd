@@ -164,6 +164,18 @@ img <- owd_card_save(p, card, height = 5.2, alt = "Bar chart of the
 
 `r owd_card_line(card)`
 
+### Our question for you
+
+In the Malawi wells, the most common need was a person trained to read
+the gauge. We would like to know how this looks in your work. Choose one
+answer with a click, and we will share the results in the next issue.
+
+**What is the biggest gap in the monitoring data you work with?**
+
+```{=markdown}
+{{ survey.monitoring-gap }}
+```
+
 ## Blog Highlights: from a raw spreadsheet to a published data package
 
 In July, the household waste data from Kampala that we featured last
