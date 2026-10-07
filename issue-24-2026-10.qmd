@@ -1,0 +1,205 @@
+---
+title: "openwashdata Newsletter - Issue 24"
+date: "2026-10-21"
+format:
+  markdown:
+    wrap: none
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+#| echo: false
+#| include: false
+
+new_pkgs <- c("gwinfraassess")
+
+for (pkg in new_pkgs) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    pak::pak(paste0("openwashdata/", pkg))
+  }
+}
+```
+
+```{=markdown}
+[View this email in your browser]({{ email_url }})
+```
+
+Welcome back to our newsletter! This month's dataset of the month
+comes from BASEflow Malawi and looks at the state of 123 groundwater
+monitoring wells. Our blog tells how the solidwastekampala package went
+from a raw spreadsheet to a published data package in 33 hours, and how
+we used AI along the way. We also thank Emmanuel Mhango as our
+contributor of the month.
+
+## Dataset of the Month: gwinfraassess
+
+gwinfraassess holds an assessment of 123 groundwater monitoring wells in
+Malawi, carried out by BASEflow Malawi in 2022 and 2023. For each well,
+field teams recorded the depth and the water level, the state of the
+automatic water level logger, the measuring equipment, how the
+community relates to the well, and what the well needs to keep working.
+
+Every well but one has an improvement plan. The action named most often
+is a trained person to read the gauge, in 76 of 122 wells, followed by
+a manual dipper in 74 wells. Many wells have a logger, but on the day of
+the assessment the data could be downloaded from only 10 of 67 loggers.
+
+- `gwinfraassess` - <https://openwashdata.github.io/gwinfraassess>:
+  `r packageDescription("gwinfraassess")$Title`
+
+```{r}
+#| label: card-gwinfraassess
+#| include: false
+
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+source("R/card.R")
+
+card <- owd_card_stats("gwinfraassess", countries = "Malawi")
+
+# The same chart as the dataset of the month on openwashdata.org
+# (index.qmd, Observable Plot), drawn once as a static image: the share
+# of wells with an improvement plan that need each action.
+action_groups <- c(
+  "Identify and training gauge reader" = "People",
+  "Provide manual dipper" = "Equipment",
+  "Replacement of the level logger" = "Equipment",
+  "Installation of a new logger" = "Equipment",
+  "Replace barologger" = "Equipment",
+  "Rehabilitation of the civil works" = "Structure",
+  "Replace end cap" = "Structure",
+  "Replacement of the cover and hinges" = "Structure",
+  "Welding on the existing hinges" = "Structure",
+  "Replace and weld the hinges" = "Structure",
+  "Redevelop the monitoring well" = "Structure",
+  "Replace the well" = "Replace or retire",
+  "Discard monitoring well" = "Replace or retire",
+  "Discard as monitoring well and donate to the community" =
+    "Replace or retire"
+)
+
+action_labels <- c(
+  "Identify and training gauge reader" = "Find and train a gauge reader",
+  "Provide manual dipper" = "Provide a manual dipper",
+  "Replacement of the level logger" = "Replace the level logger",
+  "Installation of a new logger" = "Install a new logger",
+  "Replace barologger" = "Replace the barologger",
+  "Rehabilitation of the civil works" = "Repair the civil works",
+  "Replace end cap" = "Replace the end cap",
+  "Replacement of the cover and hinges" = "Replace cover and hinges",
+  "Welding on the existing hinges" = "Weld the existing hinges",
+  "Replace and weld the hinges" = "Replace and weld the hinges",
+  "Redevelop the monitoring well" = "Redevelop the well",
+  "Replace the well" = "Replace the well",
+  "Discard monitoring well" = "Discard the well",
+  "Discard as monitoring well and donate to the community" =
+    "Discard, give to community"
+)
+
+wells <- card$data |>
+  mutate(well = row_number()) |>
+  filter(!is.na(improvement_plan))
+
+n_plans <- nrow(wells)
+
+actions <- wells |>
+  separate_longer_delim(improvement_plan, ",") |>
+  mutate(action = gsub("\\s+", " ", trimws(improvement_plan))) |>
+  filter(action %in% names(action_groups)) |>
+  distinct(well, action) |>
+  count(action, name = "n") |>
+  mutate(
+    group = factor(unname(action_groups[action]),
+      levels = c("People", "Equipment", "Structure", "Replace or retire")),
+    label = unname(action_labels[action]),
+    share = round(100 * n / n_plans)
+  ) |>
+  arrange(desc(n)) |>
+  mutate(label = factor(label, levels = rev(label)))
+
+# chart-1, chart-3, chart-2 and a neutral grey from openwashdata/brand
+palette <- c(
+  "People" = "#8a3a8a", "Equipment" = "#CF9E40",
+  "Structure" = "#b04208", "Replace or retire" = "#b9b9b9"
+)
+font <- "Atkinson Hyperlegible Next"
+
+p <- ggplot(actions, aes(x = share, y = label, fill = group)) +
+  geom_col(width = 0.8) +
+  geom_text(aes(label = paste0(share, "%")), hjust = 0, nudge_x = 0.8,
+    family = font, size = 3.2, colour = owd_colors[["dark"]]) +
+  scale_fill_manual(values = palette, name = NULL) +
+  scale_x_continuous(limits = c(0, 70), breaks = seq(0, 60, 20),
+    expand = expansion(mult = c(0, 0.02))) +
+  labs(
+    title = "The most common fix is a person",
+    subtitle = paste("Share of the", n_plans, "wells with an improvement",
+      "plan that need each action"),
+    x = "% of wells", y = NULL
+  ) +
+  theme_owd() +
+  theme(
+    text = element_text(family = font),
+    panel.grid.major.x = element_line(colour = "#e3e3e3"),
+    panel.grid.major.y = element_blank(),
+    legend.position = "top",
+    legend.justification = "left",
+    axis.title.x = element_text(colour = owd_colors[["gray"]], size = 10)
+  )
+
+img <- owd_card_save(p, card, height = 5.2, alt = "Bar chart of the
+  improvement actions recommended for 122 groundwater monitoring wells
+  in Malawi. 62 percent need a trained gauge reader, 61 percent a manual
+  dipper, 46 percent a replaced level logger and 42 percent repaired
+  civil works.")
+```
+
+`r img`
+
+`r owd_card_line(card)`
+
+## Blog Highlights: from a raw spreadsheet to a published data package
+
+In July, the household waste data from Kampala that we featured last
+month arrived as an Excel workbook with merged headers, summary rows and
+the typos of manual data entry. 33 hours later it was a reviewed and
+citable R data package with a DOI. The new post retells those hours from
+the record the repository keeps, including every prompt we sent to the
+AI. Data cleaning took about one hour of the nine hours of work, and
+the post shows where the rest went.
+
+The post ends with a statement of how we used AI for the package and for
+the post itself. We want to make such statements a standard part of our
+work.
+
+- [From a raw spreadsheet to a published data package in 33
+  hours](https://openwashdata.org/pages/blog/posts/2026-10-20-solidwastekampala-story/)
+
+## Contributor of the Month
+
+Our contributor of the month is Emmanuel Mhango, Data Steward at
+BASEflow Malawi and the author of this month's dataset. Emmanuel has
+published more than ten WASH datasets with openwashdata, and his two
+reflections on his year as Data Steward were in our last issue. Thank
+you, Emmanuel.
+
+## Get Involved
+
+We believe the openwashdata project prospers when we have **YOU**
+work together and promote open science and data practice! No matter
+what background you are from, we come up with some ways for you to
+get involved:
+
+- [Join our chatroom to meet
+  people!](https://openwashdata.org/pages/get-started/chat/)
+- [Share your WASH data with
+  us](https://openwashdata.org/pages/blog/posts/2024-05-17-data-publication-1/)
+- Spread the word. Forward this email.
+- Got more ideas? [Leave us a message on Matrix to
+  collaborate!](https://matrix.to/#/%23openwashdata-lobby:staffchat.ethz.ch)
