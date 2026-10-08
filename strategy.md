@@ -122,10 +122,11 @@ settings, so the repository is the record and the UI is the copy:
 | Settings > Email > Accent color | owd-purple `#5b195b` | |
 | Settings > General > Icon | `assets/avatar.png` from the brand repo (square, 1024 px) | |
 | Settings > General > Share image | `assets/social-preview.png` from the brand repo (1280 by 640) | |
-| Settings > Email > Header | badge `logos/OWD-logo-40.png`, linked to the site | `buttondown/email-header.html` |
-| Settings > Email > Footer | site, GitHub and chat links, unsubscribe line | `buttondown/email-footer.html` |
+| Settings > Email > Template | Modern (since 2026-10-08); it shows the icon above the title | |
+| Settings > Email > Header | off; the modern template escapes HTML in this field and shows the icon instead | |
+| Settings > Email > Footer | site, GitHub and chat links and one sentence, in markdown (the modern template adds its own unsubscribe line) | `buttondown/email-footer.md` |
 | Settings > Email > CSS | headings owd-purple, links owd-blue, code on owd-purple-bg, ink text | `buttondown/email.css` |
-| Settings > Archives > CSS | the same colours plus Atkinson Hyperlegible Next and Source Code Pro from Google Fonts | `buttondown/web.css` |
+| Settings > Archives > CSS | the same colours plus Atkinson Hyperlegible Next and Source Code Pro from Google Fonts, content width 720 px | `buttondown/web.css` |
 
 Fonts: Atkinson Hyperlegible Next for text, Source Code Pro for code.
 Mail clients mostly ignore web fonts, so the email falls back to Arial
