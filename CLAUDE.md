@@ -96,6 +96,9 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 - Leave the draft in markdown mode in the Buttondown editor. Saving it
   in the rich text ("fancy") mode converts the body to HTML and keeps
   every line end of a wrapped paragraph as `<br>`
+- Buttondown survey codes take letters and numbers only (no hyphens), and
+  the tag in the issue must match the code exactly, e.g.
+  `{{ survey.monitoringgap }}`
 - Before the send, read the draft back from the API and check that the
   body still starts with `<!-- buttondown-editor-mode: plaintext -->`
   and contains no `<br>`
