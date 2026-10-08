@@ -171,8 +171,6 @@ In the Malawi wells, the most common need was a person trained to read
 the gauge. We would like to know how this looks in your work. Choose one
 answer with a click, and we will share the results in the next issue.
 
-**What is the biggest gap in the data you work with?**
-
 ```{=markdown}
 {{ survey.monitoringgap }}
 ```
