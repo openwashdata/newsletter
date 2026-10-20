@@ -99,6 +99,10 @@ This is the openwashdata newsletter repository for managing monthly newsletter c
 - Buttondown survey codes take letters and numbers only (no hyphens), and
   the tag in the issue must match the code exactly, e.g.
   `{{ survey.monitoringgap }}`
+- Buttondown records survey answers only from the email, never from the
+  web archive, and each subscriber answers once. `buttondown/web.css`
+  hides the answers in the archive and points to the email, so write the
+  survey intro for email readers ("in the email" rather than "below")
 - Before the send, read the draft back from the API and check that the
   body still starts with `<!-- buttondown-editor-mode: plaintext -->`
   and contains no `<br>`

@@ -73,3 +73,17 @@ pre {
   padding-left: 0;
   margin-left: 0;
 }
+
+/* Buttondown surveys only record answers from the email, not from the web
+ * archive, so the archive shows the question with a pointer to the email. */
+.survey .survey__answers,
+.survey .survey__answers-list {
+  display: none !important;
+}
+
+.survey::after {
+  content: "You can answer this question with one click in the email version of this issue.";
+  display: block;
+  color: #5c5c5c;                 /* owd-grey, secondary */
+  font-style: italic;
+}
