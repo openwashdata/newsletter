@@ -72,5 +72,12 @@ pre {
 }
 
 .survey {
-  text-align: center;
+  text-align: left;
+}
+
+/* The answers are a list; without this the bullets sit apart from the text. */
+.survey ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }
