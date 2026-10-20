@@ -74,16 +74,10 @@ pre {
   margin-left: 0;
 }
 
-/* Buttondown surveys only record answers from the email, not from the web
- * archive, so the archive shows the question with a pointer to the email. */
-.survey .survey__answers,
-.survey .survey__answers-list {
-  display: none !important;
-}
-
-.survey::after {
-  content: "You can answer this question with one click in the email version of this issue.";
-  display: block;
+/* In the archive a script replaces the survey with buttons. A reader who
+ * has answered sees the buttons locked and their answer highlighted with
+ * no text, so the label says which one it is. */
+.survey-widget__answer-button--selected:disabled::after {
+  content: " (your answer)";
   color: #5c5c5c;                 /* owd-grey, secondary */
-  font-style: italic;
 }
